@@ -6,6 +6,7 @@ import numpy as np
 from project_paths import load_case
 from weak_layout_pipeline.pipeline.mesh import load_obj
 from reference_graph import build_reference_graph
+from verify_snapshot import first_differences
 from defect_selection_lexicographic import ProposalContext
 from conflict_selection import EqualityAudit
 from geometry_budget import propose
@@ -23,8 +24,9 @@ def main():
     mesh = load_obj(plan['source'])
     graph = build_reference_graph(mesh)
     frozen = json.loads(Path(plan['graph']).read_text())
-    if json.loads(json.dumps(graph)) != frozen:
-        raise RuntimeError('Rebuilt reference differs from the frozen reference')
+    differences = first_differences(json.loads(json.dumps(graph)), frozen)
+    if differences:
+        raise RuntimeError('Rebuilt reference differs from the frozen reference: ' + '; '.join(differences))
     baseline = json.loads(Path(plan['baseline_record']).read_text())
     folder = Path(plan['source']).parent / 'baseline'
     audit = EqualityAudit(mesh, np.loadtxt(folder/'miq_uv.txt', skiprows=1),

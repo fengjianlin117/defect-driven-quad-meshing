@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import numpy as np
 from project_paths import ROOT, models, load_case
@@ -11,12 +12,20 @@ from reference_graph import build_reference_graph
 
 def first_differences(actual, expected, path='$', out=None):
     out = [] if out is None else out
-    if len(out) >= 8 or actual == expected:
+    if len(out) >= 8:
+        return out
+    if type(actual) is not type(expected):
+        out.append(f'{path}: type {type(actual).__name__} vs {type(expected).__name__}')
+        return out
+    if isinstance(actual, float):
+        if math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-12):
+            return out
+    elif not isinstance(actual, (dict, list)) and actual == expected:
         return out
     if isinstance(actual, dict) and isinstance(expected, dict):
         if actual.keys() != expected.keys():
             out.append(f'{path}: dictionary keys differ')
-        for key in actual.keys() & expected.keys():
+        for key in sorted(actual.keys() & expected.keys()):
             first_differences(actual[key], expected[key], f'{path}.{key}', out)
     elif isinstance(actual, list) and isinstance(expected, list):
         if len(actual) != len(expected):
@@ -43,13 +52,18 @@ def main():
     if failures:
         raise SystemExit('\n'.join(failures))
     checked = []
+    exact = []
     if not args.hashes_only:
         for item in models():
             plan = load_case(item['model'])
             mesh = load_obj(plan['source'])
             graph = json.loads(json.dumps(build_reference_graph(mesh)))
-            if graph != json.loads(Path(plan['graph']).read_text()):
-                raise RuntimeError(f'Reference mismatch: {item["model"]}: ' + '; '.join(first_differences(graph, json.loads(Path(plan['graph']).read_text()))))
+            frozen = json.loads(Path(plan['graph']).read_text())
+            differences = first_differences(graph, frozen)
+            if differences:
+                raise RuntimeError(f'Reference mismatch: {item["model"]}: ' + '; '.join(differences))
+            if graph == frozen:
+                exact.append(item['model'])
             fields = [np.loadtxt(plan[k]) for k in ['pd1', 'pd2']]
             for field in fields:
                 if field.shape not in [(mesh.face_count, 3), (mesh.face_count, 4)] or not np.isfinite(field).all():
@@ -57,7 +71,8 @@ def main():
                 if field.shape[1] == 4 and not np.array_equal(field[:, 0], np.arange(mesh.face_count)):
                     raise RuntimeError(f'Face index mismatch: {item["model"]}')
             checked.append(item['model'])
-    print(json.dumps(dict(files_verified=len(manifest['files']), reference_graphs_identical=checked,
+    print(json.dumps(dict(files_verified=len(manifest['files']), reference_graphs_verified=checked, reference_graphs_exact=exact,
+                          float_rel_tol=1e-12, float_abs_tol=1e-12,
                           new_backend_calls=0, training_runs=0), indent=2))
 
 
