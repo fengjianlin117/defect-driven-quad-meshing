@@ -1,0 +1,86 @@
+{
+  "recommended_id": "r1_remove_1",
+  "eligible_ids": [
+    "baseline",
+    "r1_remove_0",
+    "r1_remove_1"
+  ],
+  "audit": [
+    {
+      "id": "baseline",
+      "conservative_eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "initial_uniform_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "initial_allocated_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "baseline_regression_symmetric_rms_h",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "initial_allocated_1",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "baseline_regression_symmetric_rms_h",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "r0_remove_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "r0_count_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "r0_count_1",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "r1_remove_0",
+      "conservative_eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "r1_remove_1",
+      "conservative_eligible": true,
+      "reasons": []
+    }
+  ],
+  "unrestricted_feature_priority_id": "r1_remove_1",
+  "tradeoff_ids": [
+    "baseline",
+    "r1_remove_0",
+    "r1_remove_1"
+  ],
+  "policy": "Prefer basic-valid, within-cap candidates with no measured regression in whole-feature deficit, surface RMS, or aggregate protected-feature deficit relative to the baseline. Same fixed protected edge set across candidates. Keep every alternative.",
+  "tolerance": "1e-9 relative/absolute numerical slack only; not a geometric acceptance tolerance.",
+  "limitation": "Measured aggregate safeguards, not per-feature preservation, uncertainty bounds, CAD tolerance or a pre-generation guarantee.",
+  "geometric_gate": "Basic checks AND both CGAL triangle-soup diagonal embeddings completed with no intersection and no exact degeneracy. Missing checks reject.",
+  "aggregate_limitation": "Inherited fixed-complement aggregate protection still permits per-edge regression; no engineering tolerance or bilinear embedding guarantee."
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>十二模型 · 四边形网格人工检查</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:#172838;font-family:system-ui,"Microsoft YaHei",sans-serif}header{padding:18px 24px;background:white;border-bottom:1px solid #d8e1e9}h1{font-size:23px;margin:0 0 12px;font-weight:600}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button,select{font:inherit;border:1px solid #c7d2dd;background:white;border-radius:5px;padding:7px 12px;cursor:pointer}button:hover{background:#edf3f8}label{display:flex;gap:5px;align-items:center;font-size:14px}.sub{color:#536577;font-size:13px;line-height:1.7;margin:10px 0 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px}.panel{background:white;border:1px solid #d8e1e9;overflow:hidden;border-radius:7px}.meta{padding:14px 16px;min-height:135px}.meta h2{font-size:18px;margin:0 0 9px}.metric{font-size:14px;margin:6px 0;font-variant-numeric:tabular-nums}.note{font-size:13px;line-height:1.6;color:#536577;min-height:22px}.warning{color:#a44c11}.viewport{position:relative;height:min(63vh,640px);min-height:360px;background:#e9eef3;touch-action:none}.viewport canvas{display:block;width:100%;height:100%}.empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px;text-align:center;line-height:1.9;color:#a44c11}.links{padding:10px 16px;font-size:13px;display:flex;gap:18px}a{color:#175a91}footer{margin:16px 24px;color:#627383;font-size:13px;line-height:1.7}.panel:fullscreen{background:white;display:flex;flex-direction:column}.panel:fullscreen .viewport{height:auto;flex:1}.panel:fullscreen .meta{min-height:90px}@media(max-width:900px){.grid{grid-template-columns:1fr}.viewport{height:440px}.meta{min-height:110px}}
+</style></head><body>
+<header><h1>十二模型 · 四边形网格人工检查</h1><div class="toolbar">
+<button id="prev" aria-label="上一个模型">← 上一个</button><select id="model" aria-label="模型"></select><button id="next">下一个 →</button>
+<button id="reset">斜视</button><button id="front">正视</button><button id="side">侧视</button><button id="top">俯视</button>
+<label><input type="checkbox" id="wire" checked>四边形边线</label><label><input type="checkbox" id="features">叠加源特征线</label><label><input type="checkbox" id="sync" checked>同步视角</label>
+</div><p class="sub">左键拖动旋转 · 滚轮缩放 · 右键拖动平移 · 可单窗放大。三列共用源坐标尺度，显示真实四边形边，不显示渲染用对角线。</p></header>
+<main class="grid" id="grid"></main>
+<footer>一次性列：初始阶段几何检查通过、全参考缺陷 D 最小的候选，保护条件另行标记。反馈列：按原质量与保护规则选择的最终最好推荐，可能保留初始结果或回退。<br>面数可能不同，供人工观察，不能直接作为同面数胜负。<a href="README.md">选择规则</a> · <a href="provenance.json">结果来源</a> · <span id="state" role="status"></span></footer>
+<script src="assets/three.min.js"></script><script src="mesh-data.js"></script><script>
+(()=>{
+'use strict';const data=window.MESH_REVIEW_DATA,el=id=>document.getElementById(id),panels=[];let current=0;
+data.forEach((m,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`${i+1}/12 · ${m.name}`;el('model').appendChild(o)});
+for(let i=0;i<3;i++){
+ const box=document.createElement('section');box.className='panel';box.innerHTML='<div class="meta"></div><div class="viewport"></div><div class="links"><a class="obj" download>下载原始 OBJ</a><a class="png" target="_blank">统一视角图片</a><button class="full">单窗放大</button></div>';el('grid').appendChild(box);
+ const vp=box.querySelector('.viewport'),renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0xe9eef3);vp.appendChild(renderer.domElement);
+ const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-.8,.8,.8,-.8,.01,100);camera.position.set(0,0,4);camera.lookAt(0,0,0);
+ scene.add(new THREE.AmbientLight(0xffffff,1.5));const light=new THREE.DirectionalLight(0xffffff,2.4);light.position.set(2,4,5);scene.add(light);const fill=new THREE.DirectionalLight(0xc6d8f1,1);fill.position.set(-4,-1,2);scene.add(fill);
+ const group=new THREE.Group();scene.add(group);const p={box,vp,renderer,scene,camera,group,wire:null,feature:null,available:false};panels.push(p);
+ let drag=null;vp.addEventListener('contextmenu',e=>e.preventDefault());vp.addEventListener('pointerdown',e=>{if(!p.available)return;drag={x:e.clientX,y:e.clientY,button:e.button};vp.setPointerCapture(e.pointerId)});
+ vp.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;const targets=el('sync').checked?panels:[p];for(const t of targets){if(drag.button===2){t.group.position.x+=dx*.002/t.camera.zoom;t.group.position.y-=dy*.002/t.camera.zoom}else{const q=new THREE.Quaternion().setFromEuler(new THREE.Euler(dy*.009,dx*.009,0,'XYZ'));t.group.quaternion.premultiply(q)}}render()});
+ vp.addEventListener('pointerup',()=>drag=null);vp.addEventListener('pointercancel',()=>drag=null);
+ vp.addEventListener('wheel',e=>{e.preventDefault();for(const t of el('sync').checked?panels:[p]){t.camera.zoom=THREE.MathUtils.clamp(t.camera.zoom*Math.exp(-e.deltaY*.001),.25,12);t.camera.updateProjectionMatrix()}render()},{passive:false});
+ box.querySelector('.full').onclick=()=>document.fullscreenElement?document.exitFullscreen():box.requestFullscreen();
+ new ResizeObserver(()=>resize(p)).observe(vp);
+}
+function resize(p){const w=p.vp.clientWidth,h=p.vp.clientHeight;p.renderer.setSize(w,h,false);const a=w/h,half=.76*Math.max(1,1/a);p.camera.left=-half*a;p.camera.right=half*a;p.camera.top=half;p.camera.bottom=-half;p.camera.updateProjectionMatrix();render()}
+function render(){for(const p of panels)p.renderer.render(p.scene,p.camera)}
+function view(which){for(const p of panels){p.group.position.set(0,0,0);p.camera.zoom=1;p.camera.updateProjectionMatrix();p.group.rotation.set(...({front:[0,0,0],side:[0,-Math.PI/2,0],top:[Math.PI/2,0,0],reset:[-.52,.65,0]}[which]));}render()}
+function clean(p){while(p.group.children.length){const child=p.group.children[0];p.group.remove(child);child.geometry?.dispose();child.material?.dispose()}p.wire=null;p.feature=null;const old=p.vp.querySelector('.empty');if(old)old.remove()}
+function build(p,m,features){
+ clean(p);p.available=m.available;const meta=p.box.querySelector('.meta');meta.innerHTML='';const title=document.createElement('h2');title.textContent=m.title;meta.appendChild(title);
+ const info=document.createElement('div');info.className='metric';info.textContent=m.available?`${m.quads} 个四边形 · D ${m.deficit.toFixed(3)} · RMS/h ${m.rms.toFixed(5)}`:'无有效一次性候选';meta.appendChild(info);
+ const note=document.createElement('div');note.className='note'+((m.available&&!m.accepted)||!m.available?' warning':'');note.textContent=m.note;meta.appendChild(note);
+ const obj=p.box.querySelector('.obj');obj.hidden=!m.available;if(m.available)obj.href=m.obj;p.box.querySelector('.png').href=`images/${data[current].name}.png`;
+ if(!m.available){const msg=document.createElement('div');msg.className='empty';msg.textContent=m.note;p.vp.appendChild(msg);return}
+ const pos=[],indices=[],lines=[],seen=new Set();m.vertices.forEach(v=>pos.push(...v));for(const f of m.faces){indices.push(f[0],f[1],f[2],f[0],f[2],f[3]);for(let j=0;j<4;j++){const a=f[j],b=f[(j+1)%4],key=a<b?`${a},${b}`:`${b},${a}`;if(!seen.has(key)){seen.add(key);lines.push(...m.vertices[a],...m.vertices[b])}}}
+ const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));geo.setIndex(indices);geo.computeVertexNormals();
+ const surface=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color:0xa9c1cf,roughness:.88,metalness:0,flatShading:true,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1,polygonOffsetUnits:1}));p.group.add(surface);
+ const eg=new THREE.BufferGeometry();eg.setAttribute('position',new THREE.Float32BufferAttribute(lines,3));p.wire=new THREE.LineSegments(eg,new THREE.LineBasicMaterial({color:0x24323d}));p.wire.visible=el('wire').checked;p.group.add(p.wire);
+ const fg=new THREE.BufferGeometry();fg.setAttribute('position',new THREE.Float32BufferAttribute(features.flat(),3));p.feature=new THREE.LineSegments(fg,new THREE.LineBasicMaterial({color:0xdc5727,depthTest:false,transparent:true,opacity:.9}));p.feature.visible=el('features').checked;p.feature.renderOrder=3;p.group.add(p.feature);
+}
+function select(index){current=(index+data.length)%data.length;el('model').value=current;const m=data[current];panels.forEach((p,i)=>build(p,m.panels[i],m.features));el('state').textContent=`${m.name} · 已载入 ${m.panels.filter(p=>p.available).length} 份网格`;view('reset');window.history.replaceState(null,'',`#${m.name}`)}
+el('model').onchange=e=>select(Number(e.target.value));el('prev').onclick=()=>select(current-1);el('next').onclick=()=>select(current+1);['reset','front','side','top'].forEach(id=>el(id).onclick=()=>view(id));
+el('wire').onchange=()=>{for(const p of panels)if(p.wire)p.wire.visible=el('wire').checked;render()};el('features').onchange=()=>{for(const p of panels)if(p.feature)p.feature.visible=el('features').checked;render()};
+const requested=data.findIndex(m=>`#${m.name}`===location.hash);select(requested<0?0:requested);panels.forEach(resize);window.MESH_REVIEW_READY=true;
+})();
+</script></body></html>

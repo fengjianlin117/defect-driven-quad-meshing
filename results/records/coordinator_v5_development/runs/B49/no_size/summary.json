@@ -1,0 +1,472 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 499,
+      "basic_output_pass": true,
+      "all_main_deficit": 74.76139901315513,
+      "symmetric_rms_h": 0.043709073912883235,
+      "protected_deficit": 9.750980215558553,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B49/no_size/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": true,
+      "quads": 494,
+      "basic_output_pass": true,
+      "all_main_deficit": 15.25136749616507,
+      "symmetric_rms_h": 0.034355764800139424,
+      "protected_deficit": 12.918042397545243,
+      "common_positive_regression": 5.061833293866041,
+      "newly_deficient_edges": 5,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B49/no_protection_feedback/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B49/defect_driven__uniform_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B49/no_size/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": true,
+      "quads": 494,
+      "basic_output_pass": true,
+      "all_main_deficit": 13.932176848940157,
+      "symmetric_rms_h": 0.02889407211573161,
+      "protected_deficit": 11.715656186999123,
+      "common_positive_regression": 4.197137867252139,
+      "newly_deficient_edges": 5,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B49/no_protection_feedback/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B49/defect_driven__allocated_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B49/no_size/initial_allocated_0/intersection.json"
+    }
+  ],
+  "attempts": 2,
+  "native_calls": 0,
+  "reused_attempts": 2,
+  "trace": [
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_allocated_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [
+        {
+          "add": "geometry-0002",
+          "status": "within_group_fixed_frame_conflict",
+          "risk": {
+            "forced_zero_triangle_count": 3,
+            "forced_zero_triangles": [
+              117,
+              118,
+              119
+            ],
+            "admissible": false,
+            "assumption": "Fixed baseline cut and combed axes; seam translations and full integer feasibility omitted."
+          }
+        }
+      ],
+      "screening_calls": 1,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [
+        [
+          29,
+          30
+        ],
+        [
+          29,
+          39
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          37,
+          39
+        ],
+        [
+          40,
+          42
+        ],
+        [
+          42,
+          55
+        ],
+        [
+          57,
+          73
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          64,
+          73
+        ],
+        [
+          65,
+          67
+        ],
+        [
+          67,
+          68
+        ],
+        [
+          68,
+          70
+        ],
+        [
+          70,
+          72
+        ]
+      ],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            9,
+            55
+          ],
+          [
+            29,
+            30
+          ],
+          [
+            29,
+            39
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            37,
+            39
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            42,
+            55
+          ],
+          [
+            55,
+            61
+          ],
+          [
+            57,
+            73
+          ],
+          [
+            61,
+            72
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            64,
+            73
+          ],
+          [
+            65,
+            67
+          ],
+          [
+            67,
+            68
+          ],
+          [
+            68,
+            70
+          ],
+          [
+            70,
+            72
+          ],
+          [
+            72,
+            91
+          ]
+        ],
+        "protection_trigger_edges": [
+          [
+            29,
+            30
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            42,
+            55
+          ],
+          [
+            57,
+            73
+          ],
+          [
+            64,
+            73
+          ],
+          [
+            65,
+            67
+          ],
+          [
+            67,
+            68
+          ],
+          [
+            70,
+            72
+          ]
+        ],
+        "baseline_protected_deficit": 9.750980215558553,
+        "parent_protected_deficit": 11.715656186999123,
+        "aggregate_protection_failed": true,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_allocated_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    },
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_uniform_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [
+        {
+          "add": "geometry-0002",
+          "status": "within_group_fixed_frame_conflict",
+          "risk": {
+            "forced_zero_triangle_count": 3,
+            "forced_zero_triangles": [
+              117,
+              118,
+              119
+            ],
+            "admissible": false,
+            "assumption": "Fixed baseline cut and combed axes; seam translations and full integer feasibility omitted."
+          }
+        }
+      ],
+      "screening_calls": 1,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [
+        [
+          29,
+          30
+        ],
+        [
+          29,
+          39
+        ],
+        [
+          30,
+          40
+        ],
+        [
+          37,
+          39
+        ],
+        [
+          37,
+          57
+        ],
+        [
+          40,
+          42
+        ],
+        [
+          42,
+          55
+        ],
+        [
+          57,
+          73
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          64,
+          73
+        ],
+        [
+          65,
+          67
+        ],
+        [
+          67,
+          68
+        ],
+        [
+          68,
+          70
+        ],
+        [
+          70,
+          72
+        ]
+      ],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            9,
+            55
+          ],
+          [
+            29,
+            30
+          ],
+          [
+            29,
+            39
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            37,
+            39
+          ],
+          [
+            37,
+            57
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            42,
+            55
+          ],
+          [
+            55,
+            61
+          ],
+          [
+            57,
+            73
+          ],
+          [
+            61,
+            72
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            64,
+            73
+          ],
+          [
+            65,
+            67
+          ],
+          [
+            67,
+            68
+          ],
+          [
+            68,
+            70
+          ],
+          [
+            70,
+            72
+          ],
+          [
+            72,
+            91
+          ]
+        ],
+        "protection_trigger_edges": [
+          [
+            29,
+            30
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            40,
+            42
+          ],
+          [
+            42,
+            55
+          ],
+          [
+            57,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            64,
+            73
+          ],
+          [
+            65,
+            67
+          ],
+          [
+            67,
+            68
+          ],
+          [
+            70,
+            72
+          ]
+        ],
+        "baseline_protected_deficit": 9.750980215558553,
+        "parent_protected_deficit": 12.918042397545243,
+        "aggregate_protection_failed": true,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_uniform_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "role": "Seen development comparison only; final method and family-heldout protocol still pending.",
+  "question": "Quality relative to unconstrained same-field backend and official QuadriFlow at current recommended actual counts.",
+  "static_conditions": "none/all/one-shot defect-selected constraints x uniform/source-allocated sizes; identical source, fixed field and binaries.",
+  "external_variants": {
+    "default": [],
+    "sharp": [
+      "-sharp"
+    ],
+    "sharp_sat": [
+      "-sharp",
+      "-sat"
+    ]
+  },
+  "primary": "Keep all 12 models and every condition. Pick strict-valid output closest to target actual Q within each condition, ties earliest. Compare D and RMS only when pair actual counts differ <=5%. Baseline fallback is flagged and not attributed to our modules.",
+  "secondary": "Report all attempts as quality/count points; one-shot vs feedback is an ablation, not a prerequisite for the primary contribution.",
+  "correction": "At most one count correction per cell; static inherited correction, external proportional requested_faces*target/actual. Never tune quality or select a different configuration after results.",
+  "max_static_calls": 144,
+  "max_external_calls": 72,
+  "static_stage_seconds": 60,
+  "external_attempt_seconds": 120,
+  "actual_cap": 2048,
+  "seed": 3627473,
+  "threads": 1,
+  "validity": "Same basic checks and exact triangle-soup intersection/degeneracy check under both diagonals. No method-specific protection gate for comparative quality.",
+  "cost": "Static and external max2 attempts, feedback max12. External runtime includes own field; static time conditional on supplied field. Cached calls count logically but not as new independent runs.",
+  "cache": "Exact inputs, binaries, flags, seed and numeric controls only; every reused result linked. Evaluations retain full common source reference."
+}

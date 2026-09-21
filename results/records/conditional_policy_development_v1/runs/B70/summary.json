@@ -1,0 +1,64 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 498,
+      "basic_output_pass": true,
+      "all_main_deficit": 79.26346639788147,
+      "symmetric_rms_h": 0.06679927185975487,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/conditional_policy_development_v1/runs/B70/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": true,
+      "quads": 493,
+      "basic_output_pass": true,
+      "all_main_deficit": 19.694247608792185,
+      "symmetric_rms_h": 0.029755580330942274,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.9919562828578398,
+      "newly_deficient_edges": 5,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B70/no_constraint/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B70/all_features__uniform_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/conditional_policy_development_v1/runs/B70/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": true,
+      "quads": 480,
+      "basic_output_pass": true,
+      "all_main_deficit": 12.764874373876335,
+      "symmetric_rms_h": 0.031056687734941486,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.33849683742069875,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B70/no_constraint/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B70/all_features__allocated_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/conditional_policy_development_v1/runs/B70/initial_allocated_0/intersection.json"
+    }
+  ],
+  "attempts": 2,
+  "native_calls": 0,
+  "reused_attempts": 2,
+  "trace": [
+    {
+      "stop": "initial_proposal_accepted",
+      "activation_policy": "conditional"
+    }
+  ]
+}

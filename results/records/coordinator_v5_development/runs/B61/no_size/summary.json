@@ -1,0 +1,494 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 516,
+      "basic_output_pass": true,
+      "all_main_deficit": 76.57763681955225,
+      "symmetric_rms_h": 0.04662139029230597,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_size/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": true,
+      "quads": 354,
+      "basic_output_pass": true,
+      "all_main_deficit": 15.698327016826415,
+      "symmetric_rms_h": 0.04115849285776636,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.7008216572941272,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_protection_feedback/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B61/all_features__uniform_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_size/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_uniform_1",
+      "process_success": true,
+      "quads": 556,
+      "basic_output_pass": true,
+      "all_main_deficit": 13.262311578571728,
+      "symmetric_rms_h": 0.0303737493834912,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.6165413713024946,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_protection_feedback/initial_uniform_1/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B61/all_features__uniform_1/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_size/initial_uniform_1/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": true,
+      "quads": 392,
+      "basic_output_pass": true,
+      "all_main_deficit": 20.861954201895124,
+      "symmetric_rms_h": 0.0523125696436023,
+      "protected_deficit": 0,
+      "common_positive_regression": 1.2246351333466206,
+      "newly_deficient_edges": 1,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_protection_feedback/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B61/all_features__allocated_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_size/initial_allocated_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_1",
+      "process_success": true,
+      "quads": 508,
+      "basic_output_pass": true,
+      "all_main_deficit": 14.307769214347777,
+      "symmetric_rms_h": 0.034653930076181186,
+      "protected_deficit": 0,
+      "common_positive_regression": 1.259794726986923,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_protection_feedback/initial_allocated_1/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B61/all_features__allocated_1/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B61/no_size/initial_allocated_1/intersection.json"
+    }
+  ],
+  "attempts": 4,
+  "native_calls": 0,
+  "reused_attempts": 4,
+  "trace": [
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_uniform_1",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            144,
+            349
+          ],
+          [
+            144,
+            353
+          ],
+          [
+            173,
+            230
+          ],
+          [
+            216,
+            315
+          ],
+          [
+            229,
+            315
+          ],
+          [
+            229,
+            339
+          ],
+          [
+            230,
+            340
+          ],
+          [
+            271,
+            291
+          ],
+          [
+            282,
+            291
+          ],
+          [
+            282,
+            292
+          ],
+          [
+            331,
+            333
+          ],
+          [
+            331,
+            349
+          ],
+          [
+            333,
+            340
+          ],
+          [
+            339,
+            423
+          ]
+        ],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0,
+        "parent_protected_deficit": 0,
+        "aggregate_protection_failed": false,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_uniform_1",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    },
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_allocated_1",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            144,
+            349
+          ],
+          [
+            144,
+            353
+          ],
+          [
+            173,
+            230
+          ],
+          [
+            216,
+            315
+          ],
+          [
+            229,
+            315
+          ],
+          [
+            229,
+            339
+          ],
+          [
+            230,
+            340
+          ],
+          [
+            271,
+            291
+          ],
+          [
+            282,
+            291
+          ],
+          [
+            282,
+            292
+          ],
+          [
+            331,
+            333
+          ],
+          [
+            331,
+            349
+          ],
+          [
+            333,
+            340
+          ],
+          [
+            339,
+            423
+          ],
+          [
+            350,
+            351
+          ],
+          [
+            350,
+            423
+          ]
+        ],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0,
+        "parent_protected_deficit": 0,
+        "aggregate_protection_failed": false,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_allocated_1",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    },
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_uniform_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            144,
+            349
+          ],
+          [
+            144,
+            353
+          ],
+          [
+            173,
+            230
+          ],
+          [
+            216,
+            315
+          ],
+          [
+            229,
+            315
+          ],
+          [
+            229,
+            339
+          ],
+          [
+            230,
+            340
+          ],
+          [
+            271,
+            291
+          ],
+          [
+            271,
+            304
+          ],
+          [
+            282,
+            291
+          ],
+          [
+            282,
+            292
+          ],
+          [
+            331,
+            333
+          ],
+          [
+            331,
+            349
+          ],
+          [
+            333,
+            340
+          ],
+          [
+            339,
+            423
+          ]
+        ],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0,
+        "parent_protected_deficit": 0,
+        "aggregate_protection_failed": false,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_uniform_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    },
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_allocated_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            144,
+            349
+          ],
+          [
+            144,
+            353
+          ],
+          [
+            173,
+            230
+          ],
+          [
+            216,
+            315
+          ],
+          [
+            229,
+            315
+          ],
+          [
+            229,
+            339
+          ],
+          [
+            230,
+            340
+          ],
+          [
+            238,
+            239
+          ],
+          [
+            238,
+            251
+          ],
+          [
+            239,
+            275
+          ],
+          [
+            251,
+            303
+          ],
+          [
+            271,
+            291
+          ],
+          [
+            271,
+            304
+          ],
+          [
+            275,
+            276
+          ],
+          [
+            282,
+            291
+          ],
+          [
+            282,
+            292
+          ],
+          [
+            303,
+            304
+          ],
+          [
+            325,
+            326
+          ],
+          [
+            325,
+            431
+          ],
+          [
+            327,
+            416
+          ],
+          [
+            329,
+            330
+          ],
+          [
+            329,
+            416
+          ],
+          [
+            330,
+            434
+          ],
+          [
+            331,
+            333
+          ],
+          [
+            331,
+            349
+          ],
+          [
+            333,
+            340
+          ],
+          [
+            339,
+            423
+          ],
+          [
+            366,
+            431
+          ]
+        ],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0,
+        "parent_protected_deficit": 0,
+        "aggregate_protection_failed": false,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_allocated_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    }
+  ]
+}

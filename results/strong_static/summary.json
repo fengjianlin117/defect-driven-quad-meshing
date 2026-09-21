@@ -1,0 +1,102 @@
+{
+  "integrity": {
+    "native_calls": 59,
+    "reused_attempts": 29,
+    "logical_attempts": 88,
+    "frozen_unchanged": true,
+    "complete": true
+  },
+  "conditions": {
+    "none_uniform": {
+      "all_models": {
+        "count_unmatched": 1,
+        "coordinator_dominates": 8,
+        "equivalent": 2,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "count_unmatched": 1,
+        "coordinator_dominates": 7,
+        "coordinator_invalid": 1
+      }
+    },
+    "none_allocated": {
+      "all_models": {
+        "coordinator_dominates": 8,
+        "count_unmatched": 1,
+        "tradeoff": 2,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "coordinator_dominates": 8,
+        "coordinator_invalid": 1
+      }
+    },
+    "all_uniform": {
+      "all_models": {
+        "static_no_valid": 6,
+        "tradeoff": 2,
+        "coordinator_dominates": 2,
+        "static_dominates": 1,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "static_no_valid": 5,
+        "tradeoff": 1,
+        "coordinator_dominates": 2,
+        "coordinator_invalid": 1
+      }
+    },
+    "all_allocated": {
+      "all_models": {
+        "static_no_valid": 4,
+        "coordinator_dominates": 2,
+        "static_dominates": 2,
+        "tradeoff": 1,
+        "equivalent": 2,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "static_no_valid": 3,
+        "coordinator_dominates": 2,
+        "static_dominates": 1,
+        "equivalent": 2,
+        "coordinator_invalid": 1
+      }
+    },
+    "simple_defect_uniform": {
+      "all_models": {
+        "coordinator_dominates": 4,
+        "static_no_valid": 4,
+        "tradeoff": 1,
+        "equivalent": 1,
+        "static_dominates": 1,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "coordinator_dominates": 4,
+        "static_no_valid": 3,
+        "tradeoff": 1,
+        "coordinator_invalid": 1
+      }
+    },
+    "simple_defect_allocated": {
+      "all_models": {
+        "coordinator_dominates": 4,
+        "static_no_valid": 2,
+        "static_dominates": 2,
+        "tradeoff": 1,
+        "equivalent": 2,
+        "coordinator_invalid": 1
+      },
+      "nonbaseline_models": {
+        "coordinator_dominates": 4,
+        "static_no_valid": 1,
+        "static_dominates": 1,
+        "equivalent": 2,
+        "coordinator_invalid": 1
+      }
+    }
+  },
+  "interpretation": "Each condition retained; 72 cells are not 72 independent models. Dominance refers only to feature deficit and surface RMS within the registered 5% actual-count window; ignores other objectives and solve cost."
+}

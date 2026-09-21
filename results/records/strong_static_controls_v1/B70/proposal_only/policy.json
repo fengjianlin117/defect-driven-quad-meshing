@@ -1,0 +1,20 @@
+{
+  "max_attempts": 12,
+  "feedback_rounds": 2,
+  "max_screenings_per_operation": 64,
+  "max_actual_quads": 2048,
+  "timeout_per_backend_stage": 60,
+  "threads": 1,
+  "stiffening": 0,
+  "density_step": 2.0,
+  "initial": "Uniform and source-wide allocated density with defect-driven whole-group selection; at most one count correction per branch.",
+  "parent": "Lowest whole-reference deficit among unexpanded basic-valid generated candidates; surface RMS and id break ties. Keep baseline and every candidate.",
+  "valid_feedback": "One bounded constraint addition/replacement and one regressed-deficiency size proposal from the same measured parent per round.",
+  "recovery": "When there is no basic-valid generated candidate: one group-removal hypothesis, and at most one 2x count probe in the entire run.",
+  "stopping": "Stop after two feedback rounds, twelve logical attempts, or no new operation; all corrections and aliases count toward the attempt cap.",
+  "protection": "Retain original v3 aggregate decision as primary developmental gate; use the initial selected set for its fixed unselected complement in every candidate.",
+  "common_reference": "Also report positive per-edge regression and newly deficient reference length on the same full set for all alternatives.",
+  "limitations": "No calibrated CAD tolerance, per-edge preservation, global intersection guarantee, global integer feasibility or optimal subset guarantee.",
+  "variant": "full",
+  "actual_density_step": 2.0
+}

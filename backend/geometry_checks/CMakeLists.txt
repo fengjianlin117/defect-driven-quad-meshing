@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(quad_geometry_checks LANGUAGES CXX)
+find_package(CGAL REQUIRED)
+add_executable(check_self_intersections check_self_intersections.cpp)
+target_compile_features(check_self_intersections PRIVATE cxx_std_17)
+target_link_libraries(check_self_intersections PRIVATE CGAL::CGAL)

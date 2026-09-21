@@ -1,0 +1,297 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 481,
+      "basic_output_pass": true,
+      "all_main_deficit": 115.63964998097879,
+      "symmetric_rms_h": 0.08385515116468975,
+      "protected_deficit": 0,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": false,
+      "quads": null,
+      "basic_output_pass": null,
+      "all_main_deficit": null,
+      "symmetric_rms_h": null,
+      "protected_deficit": null,
+      "common_positive_regression": null,
+      "newly_deficient_edges": null,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_size/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/development_v1/B43/all_features__uniform_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": false,
+      "quads": null,
+      "basic_output_pass": null,
+      "all_main_deficit": null,
+      "symmetric_rms_h": null,
+      "protected_deficit": null,
+      "common_positive_regression": null,
+      "newly_deficient_edges": null,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_size/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/development_v1/B43/all_features__allocated_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/initial_allocated_0/intersection.json"
+    },
+    {
+      "id": "r0_remove_0",
+      "process_success": false,
+      "quads": null,
+      "basic_output_pass": null,
+      "all_main_deficit": null,
+      "symmetric_rms_h": null,
+      "protected_deficit": null,
+      "common_positive_regression": null,
+      "newly_deficient_edges": null,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_size/r0_remove_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v4_development/runs/B43/full/r0_remove_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/r0_remove_0/intersection.json"
+    },
+    {
+      "id": "r0_count_0",
+      "process_success": false,
+      "quads": null,
+      "basic_output_pass": null,
+      "all_main_deficit": null,
+      "symmetric_rms_h": null,
+      "protected_deficit": null,
+      "common_positive_regression": null,
+      "newly_deficient_edges": null,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_size/r0_count_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v4_development/runs/B43/full/r0_count_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/r0_count_0/intersection.json"
+    },
+    {
+      "id": "r1_remove_0",
+      "process_success": false,
+      "quads": null,
+      "basic_output_pass": null,
+      "all_main_deficit": null,
+      "symmetric_rms_h": null,
+      "protected_deficit": null,
+      "common_positive_regression": null,
+      "newly_deficient_edges": null,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_size/r1_remove_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v4_development/runs/B43/full/r1_remove_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B43/no_constraint/r1_remove_0/intersection.json"
+    }
+  ],
+  "attempts": 5,
+  "native_calls": 0,
+  "reused_attempts": 5,
+  "trace": [
+    {
+      "round": 0,
+      "operation": "failure_removal",
+      "parent": "initial_allocated_0",
+      "proposal": {
+        "remove": "geometry-0006",
+        "groups": [
+          "geometry-0000",
+          "geometry-0001",
+          "geometry-0003",
+          "geometry-0002",
+          "geometry-0009",
+          "geometry-0008",
+          "geometry-0007",
+          "geometry-0005",
+          "geometry-0004"
+        ],
+        "ranking": [
+          {
+            "group": "geometry-0000",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999724701464207,
+            "displaced_baseline_deficit": 18.692384611990562
+          },
+          {
+            "group": "geometry-0001",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999460992724448,
+            "displaced_baseline_deficit": 18.664685147610612
+          },
+          {
+            "group": "geometry-0003",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999576362814095,
+            "displaced_baseline_deficit": 18.66320417253704
+          },
+          {
+            "group": "geometry-0006",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999922347093196,
+            "displaced_baseline_deficit": 9.118484483449897
+          },
+          {
+            "group": "geometry-0002",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4997833404976256,
+            "displaced_baseline_deficit": 16.399911054058673
+          },
+          {
+            "group": "geometry-0009",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999809001093121,
+            "displaced_baseline_deficit": 12.002725874497399
+          },
+          {
+            "group": "geometry-0008",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4997975603837319,
+            "displaced_baseline_deficit": 11.38306120773672
+          },
+          {
+            "group": "geometry-0007",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999798805249471,
+            "displaced_baseline_deficit": 6.196917785796096
+          },
+          {
+            "group": "geometry-0005",
+            "boundary_associations": 0,
+            "field_mismatch": 0.49997045947726904,
+            "displaced_baseline_deficit": 2.3441943271298396
+          },
+          {
+            "group": "geometry-0004",
+            "boundary_associations": 0,
+            "field_mismatch": 0.49996287917097215,
+            "displaced_baseline_deficit": 2.174081316171944
+          }
+        ],
+        "boundary_points": 0,
+        "reason": "Try removal near measured output boundary; if no boundary data, try highest field-mismatch group. This is a bounded hypothesis, not a diagnosed cause.",
+        "reference_policy": "Every displaced edge remains in the common reference and all size requests."
+      }
+    },
+    {
+      "round": 0,
+      "operation": "count_probe",
+      "parent": "initial_allocated_0",
+      "target": 1500,
+      "allocation": {
+        "target_area_ratio": 3.1185031185031185,
+        "actual_area_proxy": 3.1185031185031327,
+        "retained_contrast": 1.0,
+        "scale": 1.4148953858383293,
+        "gradation_upper_bound": 0.3533830168678857,
+        "min_size_h": 0.33363827427011833,
+        "max_size_h": 1.36936178513574,
+        "unmet_request_vertices": 0,
+        "max_relative_request_shortfall": 0.0,
+        "coarsened_area_fraction": 0.007577421577580762
+      }
+    },
+    {
+      "round": 1,
+      "operation": "failure_removal",
+      "parent": "r0_count_0",
+      "proposal": {
+        "remove": "geometry-0006",
+        "groups": [
+          "geometry-0000",
+          "geometry-0001",
+          "geometry-0003",
+          "geometry-0002",
+          "geometry-0009",
+          "geometry-0008",
+          "geometry-0007",
+          "geometry-0005",
+          "geometry-0004"
+        ],
+        "ranking": [
+          {
+            "group": "geometry-0000",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999724701464207,
+            "displaced_baseline_deficit": 18.692384611990562
+          },
+          {
+            "group": "geometry-0001",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999460992724448,
+            "displaced_baseline_deficit": 18.664685147610612
+          },
+          {
+            "group": "geometry-0003",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999576362814095,
+            "displaced_baseline_deficit": 18.66320417253704
+          },
+          {
+            "group": "geometry-0006",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999922347093196,
+            "displaced_baseline_deficit": 9.118484483449897
+          },
+          {
+            "group": "geometry-0002",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4997833404976256,
+            "displaced_baseline_deficit": 16.399911054058673
+          },
+          {
+            "group": "geometry-0009",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999809001093121,
+            "displaced_baseline_deficit": 12.002725874497399
+          },
+          {
+            "group": "geometry-0008",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4997975603837319,
+            "displaced_baseline_deficit": 11.38306120773672
+          },
+          {
+            "group": "geometry-0007",
+            "boundary_associations": 0,
+            "field_mismatch": 0.4999798805249471,
+            "displaced_baseline_deficit": 6.196917785796096
+          },
+          {
+            "group": "geometry-0005",
+            "boundary_associations": 0,
+            "field_mismatch": 0.49997045947726904,
+            "displaced_baseline_deficit": 2.3441943271298396
+          },
+          {
+            "group": "geometry-0004",
+            "boundary_associations": 0,
+            "field_mismatch": 0.49996287917097215,
+            "displaced_baseline_deficit": 2.174081316171944
+          }
+        ],
+        "boundary_points": 0,
+        "reason": "Try removal near measured output boundary; if no boundary data, try highest field-mismatch group. This is a bounded hypothesis, not a diagnosed cause.",
+        "reference_policy": "Every displaced edge remains in the common reference and all size requests."
+      }
+    }
+  ]
+}

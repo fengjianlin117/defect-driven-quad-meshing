@@ -1,0 +1,49 @@
+{
+  "recommended_id": "baseline",
+  "eligible_ids": [
+    "baseline"
+  ],
+  "audit": [
+    {
+      "id": "baseline",
+      "conservative_eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "initial_uniform_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "initial_uniform_1",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    },
+    {
+      "id": "initial_allocated_0",
+      "conservative_eligible": false,
+      "reasons": [
+        "basic_or_resource_checks_failed",
+        "missing_or_invalid_all_main_deficit",
+        "missing_or_invalid_symmetric_rms_h",
+        "missing_or_invalid_protected_deficit",
+        "independent_intersection_or_basic_check_failed_or_incomplete"
+      ]
+    }
+  ],
+  "unrestricted_feature_priority_id": "baseline",
+  "tradeoff_ids": [
+    "baseline"
+  ],
+  "policy": "Prefer basic-valid, within-cap candidates with no measured regression in whole-feature deficit, surface RMS, or aggregate protected-feature deficit relative to the baseline. Same fixed protected edge set across candidates. Keep every alternative.",
+  "tolerance": "1e-9 relative/absolute numerical slack only; not a geometric acceptance tolerance.",
+  "limitation": "Measured aggregate safeguards, not per-feature preservation, uncertainty bounds, CAD tolerance or a pre-generation guarantee.",
+  "geometric_gate": "Basic checks AND both CGAL triangle-soup diagonal embeddings completed with no intersection and no exact degeneracy. Missing checks reject.",
+  "aggregate_limitation": "Inherited fixed-complement aggregate protection still permits per-edge regression; no engineering tolerance or bilinear embedding guarantee."
+}

@@ -1,0 +1,124 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 483,
+      "basic_output_pass": true,
+      "all_main_deficit": 0.23897138288141476,
+      "symmetric_rms_h": 0.030050611678607994,
+      "protected_deficit": 0.23897138288141476,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B34/no_protection_feedback/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": true,
+      "quads": 483,
+      "basic_output_pass": true,
+      "all_main_deficit": 0.23897138288141476,
+      "symmetric_rms_h": 0.030050611678607994,
+      "protected_deficit": 0.23897138288141476,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B34/full/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B34/no_features__uniform_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B34/no_protection_feedback/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": true,
+      "quads": 490,
+      "basic_output_pass": true,
+      "all_main_deficit": 0.16868037693314164,
+      "symmetric_rms_h": 0.03344015674716101,
+      "protected_deficit": 0.16868037693314164,
+      "common_positive_regression": 0.04987197793035397,
+      "newly_deficient_edges": 0,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B34/full/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/heldout/controls/development/B34/no_features__allocated_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B34/no_protection_feedback/initial_allocated_0/intersection.json"
+    }
+  ],
+  "attempts": 2,
+  "native_calls": 0,
+  "reused_attempts": 2,
+  "trace": [
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_allocated_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0.23897138288141476,
+        "parent_protected_deficit": 0.16868037693314164,
+        "aggregate_protection_failed": false,
+        "include_protection": false,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "operation": "size",
+      "parent": "initial_allocated_0",
+      "audit": null
+    },
+    {
+      "round": 0,
+      "parent": "initial_allocated_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    },
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_uniform_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [],
+      "screening_calls": 0,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [],
+      "trigger_audit": {
+        "original_deficient_edges": [],
+        "protection_trigger_edges": [],
+        "baseline_protected_deficit": 0.23897138288141476,
+        "parent_protected_deficit": 0.23897138288141476,
+        "aggregate_protection_failed": false,
+        "include_protection": false,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "operation": "size",
+      "parent": "initial_uniform_0",
+      "audit": null
+    },
+    {
+      "round": 0,
+      "parent": "initial_uniform_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    }
+  ]
+}

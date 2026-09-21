@@ -1,0 +1,157 @@
+{
+  "method_source": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/conditional_policy_development_v1/method",
+  "audit_scope": "Static transitive Python imports plus import blocking and rebuilding existing reference graphs. No training, native backend calls, or complete pipeline rerun.",
+  "entrypoints": [
+    "conditional_coordinator",
+    "reference_graph",
+    "cad_proposal_v3"
+  ],
+  "reachable_modules": {
+    "cad_proposal_v3": "cad_proposal_v3.py",
+    "weak_layout_pipeline.backend.runner": "weak_layout_pipeline/backend/runner.py",
+    "weak_layout_pipeline.backend": "weak_layout_pipeline/backend/__init__.py",
+    "weak_layout_pipeline": "weak_layout_pipeline/__init__.py",
+    "weak_layout_pipeline.pipeline.sampling": "weak_layout_pipeline/pipeline/sampling.py",
+    "weak_layout_pipeline.pipeline.mesh": "weak_layout_pipeline/pipeline/mesh.py",
+    "weak_layout_pipeline.pipeline": "weak_layout_pipeline/pipeline/__init__.py",
+    "weak_layout_pipeline.pipeline.evaluate": "weak_layout_pipeline/pipeline/evaluate.py",
+    "weak_layout_pipeline.direction_field.compatibility": "weak_layout_pipeline/direction_field/compatibility.py",
+    "weak_layout_pipeline.direction_field.adapter": "weak_layout_pipeline/direction_field/adapter.py",
+    "weak_layout_pipeline.direction_field": "weak_layout_pipeline/direction_field/__init__.py",
+    "weak_layout_pipeline.direction_field.reconcile": "weak_layout_pipeline/direction_field/reconcile.py",
+    "evaluation_review": "evaluation_review.py",
+    "constraint_preflight": "constraint_preflight.py",
+    "defect_driven_selection": "defect_driven_selection.py",
+    "defect_predictor_v1": "defect_predictor_v1.py",
+    "feature_diagnostics": "feature_diagnostics.py",
+    "weak_layout_pipeline.structural_lines.baseline_guided": "weak_layout_pipeline/structural_lines/baseline_guided.py",
+    "weak_layout_pipeline.structural_lines.selection": "weak_layout_pipeline/structural_lines/selection.py",
+    "weak_layout_pipeline.structural_lines.evidence": "weak_layout_pipeline/structural_lines/evidence.py",
+    "weak_layout_pipeline.structural_lines": "weak_layout_pipeline/structural_lines/__init__.py",
+    "weak_layout_pipeline.structural_lines.roles": "weak_layout_pipeline/structural_lines/roles.py",
+    "conflict_selection": "conflict_selection.py",
+    "protected_decision": "protected_decision.py",
+    "candidate_decision": "candidate_decision.py",
+    "geometry_budget": "geometry_budget.py",
+    "defect_selection_v2": "defect_selection_v2.py",
+    "defect_selection_lexicographic": "defect_selection_lexicographic.py",
+    "reference_graph": "reference_graph.py",
+    "geometric_inventory": "geometric_inventory.py",
+    "proposal_cli": "proposal_cli.py",
+    "conditional_coordinator": "conditional_coordinator.py",
+    "coordinator_v5": "coordinator_v5.py",
+    "coordination": "coordination.py",
+    "protection_feedback": "protection_feedback.py",
+    "coordinator": "coordinator.py",
+    "neutral_evaluation": "neutral_evaluation.py"
+  },
+  "external_import_roots": [
+    "__future__",
+    "argparse",
+    "collections",
+    "copy",
+    "dataclasses",
+    "datetime",
+    "hashlib",
+    "heapq",
+    "json",
+    "math",
+    "numpy",
+    "os",
+    "pathlib",
+    "scipy",
+    "shlex",
+    "subprocess",
+    "time",
+    "typing"
+  ],
+  "blocked_modules": [
+    "neurcross",
+    "structural_graph",
+    "structural_pipeline"
+  ],
+  "blocked_import_attempts": [],
+  "imported_coordinator": "ConditionalCoordinator",
+  "rebuilt_existing_reference_graphs": [
+    {
+      "model": "B49",
+      "exact_graph_equal": true,
+      "groups": 6,
+      "source_edges": 116
+    },
+    {
+      "model": "B32",
+      "exact_graph_equal": true,
+      "groups": 11,
+      "source_edges": 197
+    },
+    {
+      "model": "B43",
+      "exact_graph_equal": true,
+      "groups": 10,
+      "source_edges": 300
+    },
+    {
+      "model": "B53",
+      "exact_graph_equal": true,
+      "groups": 6,
+      "source_edges": 182
+    },
+    {
+      "model": "B68",
+      "exact_graph_equal": true,
+      "groups": 16,
+      "source_edges": 184
+    },
+    {
+      "model": "B33",
+      "exact_graph_equal": true,
+      "groups": 10,
+      "source_edges": 213
+    },
+    {
+      "model": "B34",
+      "exact_graph_equal": true,
+      "groups": 5,
+      "source_edges": 18
+    },
+    {
+      "model": "B61",
+      "exact_graph_equal": true,
+      "groups": 4,
+      "source_edges": 133
+    },
+    {
+      "model": "B70",
+      "exact_graph_equal": true,
+      "groups": 6,
+      "source_edges": 184
+    },
+    {
+      "model": "B65",
+      "exact_graph_equal": true,
+      "groups": 6,
+      "source_edges": 158
+    },
+    {
+      "model": "B31",
+      "exact_graph_equal": true,
+      "groups": 10,
+      "source_edges": 186
+    },
+    {
+      "model": "B73",
+      "exact_graph_equal": true,
+      "groups": 4,
+      "source_edges": 124
+    }
+  ],
+  "all_graphs_identical": true,
+  "legacy_import_files_outside_current_closure": [
+    "weak_layout_pipeline/tests/test_joint.py",
+    "weak_layout_pipeline/pipeline/generated.py",
+    "weak_layout_pipeline/experiments/structural_line_gain/candidates.py"
+  ],
+  "new_backend_calls": 0,
+  "new_training_runs": 0
+}

@@ -1,0 +1,760 @@
+{
+  "candidates": [
+    {
+      "id": "baseline",
+      "process_success": true,
+      "quads": 464,
+      "basic_output_pass": true,
+      "all_main_deficit": 124.58252820876551,
+      "symmetric_rms_h": 0.06356320112231519,
+      "protected_deficit": 39.6969618775126,
+      "common_positive_regression": 0.0,
+      "newly_deficient_edges": 0,
+      "reused": null,
+      "source_record": null,
+      "quad_path": null,
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_size/baseline_intersection.json"
+    },
+    {
+      "id": "initial_uniform_0",
+      "process_success": true,
+      "quads": 488,
+      "basic_output_pass": true,
+      "all_main_deficit": 56.687568474499926,
+      "symmetric_rms_h": 0.05749802614791919,
+      "protected_deficit": 44.48763048398993,
+      "common_positive_regression": 7.375906615635021,
+      "newly_deficient_edges": 8,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_protection_feedback/initial_uniform_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B31/defect_driven__uniform_0/backend/quad.obj",
+      "strict_output_pass": true,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_size/initial_uniform_0/intersection.json"
+    },
+    {
+      "id": "initial_uniform_1",
+      "process_success": true,
+      "quads": 467,
+      "basic_output_pass": false,
+      "all_main_deficit": 48.265467281946755,
+      "symmetric_rms_h": 0.04210784662469782,
+      "protected_deficit": 42.114295570347004,
+      "common_positive_regression": 5.714051439021438,
+      "newly_deficient_edges": 7,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_protection_feedback/initial_uniform_1/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B31/defect_driven__uniform_1/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_size/initial_uniform_1/intersection.json"
+    },
+    {
+      "id": "initial_allocated_0",
+      "process_success": true,
+      "quads": 493,
+      "basic_output_pass": true,
+      "all_main_deficit": 41.74293627187693,
+      "symmetric_rms_h": 0.037784008900822404,
+      "protected_deficit": 37.980256684129735,
+      "common_positive_regression": 6.647863104662048,
+      "newly_deficient_edges": 7,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_protection_feedback/initial_allocated_0/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B31/defect_driven__allocated_0/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": false,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_size/initial_allocated_0/intersection.json"
+    },
+    {
+      "id": "initial_allocated_1",
+      "process_success": true,
+      "quads": 398,
+      "basic_output_pass": false,
+      "all_main_deficit": 53.27058820550045,
+      "symmetric_rms_h": 0.07379695742321352,
+      "protected_deficit": 41.79113362809479,
+      "common_positive_regression": 9.94911206399964,
+      "newly_deficient_edges": 9,
+      "reused": true,
+      "source_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_protection_feedback/initial_allocated_1/result.json",
+      "quad_path": "research://source-repository/research_runs/2026-09-20_cad_decision_v2/defect_driven_v3/development/B31/defect_driven__allocated_1/backend/quad.obj",
+      "strict_output_pass": false,
+      "intersection_clear": true,
+      "intersection_record": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/coordinator_v5_development/runs/B31/no_size/initial_allocated_1/intersection.json"
+    }
+  ],
+  "attempts": 4,
+  "native_calls": 0,
+  "reused_attempts": 4,
+  "trace": [
+    {
+      "round": 0,
+      "operation": "constraint",
+      "parent": "initial_uniform_0",
+      "proposal": null,
+      "alternatives": [],
+      "trace": [
+        {
+          "add": "geometry-0009",
+          "status": "within_group_fixed_frame_conflict",
+          "risk": {
+            "forced_zero_triangle_count": 1,
+            "forced_zero_triangles": [
+              2201
+            ],
+            "admissible": false,
+            "assumption": "Fixed baseline cut and combed axes; seam translations and full integer feasibility omitted."
+          }
+        },
+        {
+          "add": "geometry-0008",
+          "status": "within_group_fixed_frame_conflict",
+          "risk": {
+            "forced_zero_triangle_count": 1,
+            "forced_zero_triangles": [
+              1803
+            ],
+            "admissible": false,
+            "assumption": "Fixed baseline cut and combed axes; seam translations and full integer feasibility omitted."
+          }
+        }
+      ],
+      "screening_calls": 2,
+      "budget_exhausted": false,
+      "unaddressed_required_edges": [
+        [
+          783,
+          805
+        ],
+        [
+          783,
+          813
+        ],
+        [
+          786,
+          787
+        ],
+        [
+          786,
+          797
+        ],
+        [
+          787,
+          830
+        ],
+        [
+          795,
+          797
+        ],
+        [
+          795,
+          823
+        ],
+        [
+          805,
+          806
+        ],
+        [
+          806,
+          815
+        ],
+        [
+          813,
+          826
+        ],
+        [
+          815,
+          824
+        ],
+        [
+          823,
+          899
+        ],
+        [
+          824,
+          1008
+        ],
+        [
+          830,
+          836
+        ],
+        [
+          899,
+          900
+        ],
+        [
+          900,
+          904
+        ],
+        [
+          901,
+          902
+        ],
+        [
+          901,
+          905
+        ],
+        [
+          902,
+          920
+        ],
+        [
+          904,
+          905
+        ],
+        [
+          920,
+          930
+        ],
+        [
+          930,
+          935
+        ],
+        [
+          935,
+          944
+        ],
+        [
+          944,
+          1142
+        ],
+        [
+          949,
+          951
+        ],
+        [
+          949,
+          983
+        ],
+        [
+          952,
+          979
+        ],
+        [
+          952,
+          1006
+        ],
+        [
+          979,
+          997
+        ],
+        [
+          982,
+          1006
+        ],
+        [
+          982,
+          1012
+        ],
+        [
+          983,
+          988
+        ],
+        [
+          988,
+          997
+        ],
+        [
+          999,
+          1001
+        ],
+        [
+          999,
+          1008
+        ],
+        [
+          1001,
+          1003
+        ],
+        [
+          1003,
+          1004
+        ],
+        [
+          1004,
+          1013
+        ],
+        [
+          1011,
+          1012
+        ],
+        [
+          1011,
+          1013
+        ],
+        [
+          1064,
+          1161
+        ],
+        [
+          1142,
+          1198
+        ],
+        [
+          1161,
+          1187
+        ],
+        [
+          1187,
+          1225
+        ],
+        [
+          1188,
+          1198
+        ],
+        [
+          1188,
+          1225
+        ]
+      ],
+      "trigger_audit": {
+        "original_deficient_edges": [
+          [
+            78,
+            79
+          ],
+          [
+            107,
+            141
+          ],
+          [
+            107,
+            190
+          ],
+          [
+            123,
+            140
+          ],
+          [
+            130,
+            154
+          ],
+          [
+            132,
+            170
+          ],
+          [
+            135,
+            152
+          ],
+          [
+            135,
+            155
+          ],
+          [
+            140,
+            150
+          ],
+          [
+            141,
+            145
+          ],
+          [
+            145,
+            168
+          ],
+          [
+            147,
+            151
+          ],
+          [
+            147,
+            180
+          ],
+          [
+            151,
+            187
+          ],
+          [
+            152,
+            180
+          ],
+          [
+            155,
+            159
+          ],
+          [
+            159,
+            285
+          ],
+          [
+            168,
+            298
+          ],
+          [
+            170,
+            187
+          ],
+          [
+            285,
+            300
+          ],
+          [
+            298,
+            433
+          ],
+          [
+            300,
+            440
+          ],
+          [
+            347,
+            362
+          ],
+          [
+            347,
+            483
+          ],
+          [
+            361,
+            362
+          ],
+          [
+            361,
+            400
+          ],
+          [
+            399,
+            400
+          ],
+          [
+            399,
+            406
+          ],
+          [
+            406,
+            419
+          ],
+          [
+            425,
+            427
+          ],
+          [
+            425,
+            440
+          ],
+          [
+            427,
+            446
+          ],
+          [
+            434,
+            436
+          ],
+          [
+            434,
+            471
+          ],
+          [
+            438,
+            471
+          ],
+          [
+            438,
+            482
+          ],
+          [
+            445,
+            557
+          ],
+          [
+            446,
+            459
+          ],
+          [
+            451,
+            483
+          ],
+          [
+            459,
+            482
+          ],
+          [
+            573,
+            579
+          ],
+          [
+            573,
+            640
+          ],
+          [
+            579,
+            635
+          ],
+          [
+            634,
+            635
+          ],
+          [
+            783,
+            805
+          ],
+          [
+            783,
+            813
+          ],
+          [
+            786,
+            787
+          ],
+          [
+            786,
+            797
+          ],
+          [
+            787,
+            830
+          ],
+          [
+            795,
+            797
+          ],
+          [
+            795,
+            823
+          ],
+          [
+            805,
+            806
+          ],
+          [
+            806,
+            815
+          ],
+          [
+            815,
+            824
+          ],
+          [
+            823,
+            899
+          ],
+          [
+            824,
+            1008
+          ],
+          [
+            830,
+            836
+          ],
+          [
+            899,
+            900
+          ],
+          [
+            900,
+            904
+          ],
+          [
+            901,
+            902
+          ],
+          [
+            901,
+            905
+          ],
+          [
+            902,
+            920
+          ],
+          [
+            904,
+            905
+          ],
+          [
+            920,
+            930
+          ],
+          [
+            930,
+            935
+          ],
+          [
+            935,
+            944
+          ],
+          [
+            944,
+            1142
+          ],
+          [
+            949,
+            951
+          ],
+          [
+            949,
+            983
+          ],
+          [
+            952,
+            979
+          ],
+          [
+            952,
+            1006
+          ],
+          [
+            979,
+            997
+          ],
+          [
+            982,
+            1006
+          ],
+          [
+            982,
+            1012
+          ],
+          [
+            983,
+            988
+          ],
+          [
+            988,
+            997
+          ],
+          [
+            999,
+            1001
+          ],
+          [
+            999,
+            1008
+          ],
+          [
+            1001,
+            1003
+          ],
+          [
+            1003,
+            1004
+          ],
+          [
+            1004,
+            1013
+          ],
+          [
+            1011,
+            1012
+          ],
+          [
+            1011,
+            1013
+          ],
+          [
+            1064,
+            1161
+          ],
+          [
+            1142,
+            1198
+          ],
+          [
+            1161,
+            1187
+          ],
+          [
+            1187,
+            1225
+          ],
+          [
+            1188,
+            1198
+          ],
+          [
+            1188,
+            1225
+          ]
+        ],
+        "protection_trigger_edges": [
+          [
+            783,
+            813
+          ],
+          [
+            786,
+            797
+          ],
+          [
+            787,
+            830
+          ],
+          [
+            795,
+            797
+          ],
+          [
+            795,
+            823
+          ],
+          [
+            813,
+            826
+          ],
+          [
+            823,
+            899
+          ],
+          [
+            830,
+            836
+          ],
+          [
+            899,
+            900
+          ],
+          [
+            900,
+            904
+          ],
+          [
+            904,
+            905
+          ],
+          [
+            935,
+            944
+          ],
+          [
+            944,
+            1142
+          ],
+          [
+            949,
+            951
+          ],
+          [
+            952,
+            979
+          ],
+          [
+            1064,
+            1161
+          ],
+          [
+            1161,
+            1187
+          ],
+          [
+            1187,
+            1225
+          ]
+        ],
+        "baseline_protected_deficit": 39.6969618775126,
+        "parent_protected_deficit": 44.48763048398993,
+        "aggregate_protection_failed": true,
+        "include_protection": true,
+        "policy": "When the fixed initial complement violates its unchanged aggregate safeguard, allow its individually regressed edges to trigger whole-group repair even below initial diagnostic thresholds."
+      }
+    },
+    {
+      "round": 0,
+      "parent": "initial_uniform_0",
+      "no_operation": true,
+      "action": "scan_next_parent"
+    }
+  ]
+}

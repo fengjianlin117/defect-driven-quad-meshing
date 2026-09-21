@@ -1,0 +1,335 @@
+{
+  "models": 12,
+  "obj_files": 45,
+  "all_copies_hash_verified": true,
+  "missing_valid_one_shot": [
+    "B32",
+    "B43",
+    "B33"
+  ],
+  "selection": {
+    "baseline": "Original frozen same-field backend baseline, not a newly count-calibrated control.",
+    "one_shot": "From initial phase of frozen v5 full run: basic+both-diagonal intersection-valid, <=2048 quads; minimize full-reference D, then RMS, Q, id. Original protection eligibility shown separately.",
+    "feedback": "Frozen v5 full decision recommended_id: best under unchanged protection and geometry gates, including initial retention or baseline fallback.",
+    "missing": "No valid initial candidate remains empty; no substitutions. At most three quad meshes per model.",
+    "display": "Original OBJ copied byte-for-byte. Viewer transforms only by common source center/scale; true quad edges, no triangulation diagonals. Figures use identical source scale/camera per row.",
+    "warning": "Actual counts differ. Manual review panel is not a claim of equal-count superiority."
+  },
+  "files": [
+    {
+      "model": "B49",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B49\\source.obj",
+      "file": "B49\\00_原始三角网格.obj",
+      "sha256": "2ddba58ceb283af036360718547b74df346a026fcc64d334b8ae9d495bf19a73"
+    },
+    {
+      "model": "B49",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B49_baseline.obj",
+      "file": "B49\\01_基线.obj",
+      "sha256": "d45d91fec6e4effaf24446eef5264815ab45b54dbd105aee22640e94237193a1"
+    },
+    {
+      "model": "B49",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B49_one_shot.obj",
+      "file": "B49\\02_一次性提案.obj",
+      "sha256": "e21d6521207b3c01832b5d7833446a856a384e297eb9caee371f2bb56b43c08a"
+    },
+    {
+      "model": "B49",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B49_feedback.obj",
+      "file": "B49\\03_反馈最终结果.obj",
+      "sha256": "46cafc3ae3bdefc6dbbff14200c69b81181f5df3e9d54a1ffb702037f26bf53a"
+    },
+    {
+      "model": "B32",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B32\\source.obj",
+      "file": "B32\\00_原始三角网格.obj",
+      "sha256": "e6f68b87391f5c55a42c9ac9e789dcf28b665309d21569188605c0de2c502ee1"
+    },
+    {
+      "model": "B32",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B32_baseline.obj",
+      "file": "B32\\01_基线.obj",
+      "sha256": "7f7f2f86b5f659ef24278c0668110da0bdb1fe5b372c29f0c35b4ae88bdbd8b9"
+    },
+    {
+      "model": "B32",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B32_feedback.obj",
+      "file": "B32\\03_反馈最终结果.obj",
+      "sha256": "8d3a6c66fbc6dd5334008fc4028f48cee25d8c264284b6ef7eb215042f1d889e"
+    },
+    {
+      "model": "B43",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B43\\source.obj",
+      "file": "B43\\00_原始三角网格.obj",
+      "sha256": "e83666bd50af9b5b7edd4d39f203cad52a05214603756249036e685b9c73ad3d"
+    },
+    {
+      "model": "B43",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B43_baseline.obj",
+      "file": "B43\\01_基线.obj",
+      "sha256": "4a03e8d898b49c9f71e691908afbd9ad2cc905b912f534d819030c372ea8130f"
+    },
+    {
+      "model": "B43",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B43_feedback.obj",
+      "file": "B43\\03_反馈最终结果.obj",
+      "sha256": "4a03e8d898b49c9f71e691908afbd9ad2cc905b912f534d819030c372ea8130f"
+    },
+    {
+      "model": "B53",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B53\\source.obj",
+      "file": "B53\\00_原始三角网格.obj",
+      "sha256": "c3fe137cb331d3fd54cc02856ba5e5bddefd8e069419e43a1dd121f3c5662d90"
+    },
+    {
+      "model": "B53",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B53_baseline.obj",
+      "file": "B53\\01_基线.obj",
+      "sha256": "bfaa2ded5e2decfc9dd781c6629a21c15074bcf477a1252994b03b5eaa48f59f"
+    },
+    {
+      "model": "B53",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B53_one_shot.obj",
+      "file": "B53\\02_一次性提案.obj",
+      "sha256": "b1632b55405b8416d49587fbb621c9c98de1880665826ad14e8329e68d374edb"
+    },
+    {
+      "model": "B53",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B53_feedback.obj",
+      "file": "B53\\03_反馈最终结果.obj",
+      "sha256": "9400bb5cb663e35b730c889570354b2dc33697824ecaefd1c76eb1fb8774c346"
+    },
+    {
+      "model": "B68",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B68\\source.obj",
+      "file": "B68\\00_原始三角网格.obj",
+      "sha256": "27a879ed03af80f994670448d597979a8cd5751a4fc337b9840e5b0c62486de6"
+    },
+    {
+      "model": "B68",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B68_baseline.obj",
+      "file": "B68\\01_基线.obj",
+      "sha256": "e9f50e39a595a3a75755769c1f46bb4ea032c7a1eb53e91f5b81a56be1deae6d"
+    },
+    {
+      "model": "B68",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B68_one_shot.obj",
+      "file": "B68\\02_一次性提案.obj",
+      "sha256": "90e6ec34832fc39c35a580106c3da4c19be569508881a4d6e7841f4254189cba"
+    },
+    {
+      "model": "B68",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B68_feedback.obj",
+      "file": "B68\\03_反馈最终结果.obj",
+      "sha256": "11a705333e116552c069f20abf97356457c93087604a2d305053cb6263c59659"
+    },
+    {
+      "model": "B33",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-19_goal_adaptive_v1\\cad_heldout_20260920_v1\\inputs\\B33\\source.obj",
+      "file": "B33\\00_原始三角网格.obj",
+      "sha256": "7bc7610926859e5631c723900e8affaf3b2aa3d35c58a4bc834fed0165e19cbc"
+    },
+    {
+      "model": "B33",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B33_baseline.obj",
+      "file": "B33\\01_基线.obj",
+      "sha256": "be6bc1894a7587b97830233b5fabcc3270444a0d91a2bd20f385b4ebc08283e2"
+    },
+    {
+      "model": "B33",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B33_feedback.obj",
+      "file": "B33\\03_反馈最终结果.obj",
+      "sha256": "466fd335e85d2478a75a471e87f46768dd878c2090c51918de8a387ae614533a"
+    },
+    {
+      "model": "B34",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B34\\source.obj",
+      "file": "B34\\00_原始三角网格.obj",
+      "sha256": "0287c74f278e3f914a08b69d000ddcba1e83b00648274f44d92e8d0f53c8d5da"
+    },
+    {
+      "model": "B34",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B34_baseline.obj",
+      "file": "B34\\01_基线.obj",
+      "sha256": "100a6de29218f5d77246bdf2874b2f3a560d5ed23a9e22a5e6dc7f59b9ce1719"
+    },
+    {
+      "model": "B34",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B34_one_shot.obj",
+      "file": "B34\\02_一次性提案.obj",
+      "sha256": "1b3a03433a044c01ce7e6542a566803ab45bab57b796bbd85959e57cd747a808"
+    },
+    {
+      "model": "B34",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B34_feedback.obj",
+      "file": "B34\\03_反馈最终结果.obj",
+      "sha256": "100a6de29218f5d77246bdf2874b2f3a560d5ed23a9e22a5e6dc7f59b9ce1719"
+    },
+    {
+      "model": "B61",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B61\\source.obj",
+      "file": "B61\\00_原始三角网格.obj",
+      "sha256": "f4fc63b351606356d66d4642f2bf6a6740c1600a964fe0cd73a9b161f86ab835"
+    },
+    {
+      "model": "B61",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B61_baseline.obj",
+      "file": "B61\\01_基线.obj",
+      "sha256": "d8ac29b3c894ddfffe47f58eeb88bb10d985dad6f7cb1f59ca0326c66b4b1a76"
+    },
+    {
+      "model": "B61",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B61_one_shot.obj",
+      "file": "B61\\02_一次性提案.obj",
+      "sha256": "35836005de4ceddcfa712db96d0e855be1f27ab060d260b8374e5efbe549b982"
+    },
+    {
+      "model": "B61",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B61_feedback.obj",
+      "file": "B61\\03_反馈最终结果.obj",
+      "sha256": "523725235f053ffd9a0b603cce04408ca6bfbe736c64c55c0503476ce191a79e"
+    },
+    {
+      "model": "B70",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B70\\source.obj",
+      "file": "B70\\00_原始三角网格.obj",
+      "sha256": "6023323cd66cf86be1e5f793227aa6a9dd1278bcf828499df84349de5519639d"
+    },
+    {
+      "model": "B70",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B70_baseline.obj",
+      "file": "B70\\01_基线.obj",
+      "sha256": "b79ecb2afade1b932829925d2066e621a6b3eac9db3bc8560a583d203419dc8e"
+    },
+    {
+      "model": "B70",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B70_one_shot.obj",
+      "file": "B70\\02_一次性提案.obj",
+      "sha256": "7ce27b8bb9b9ae4150d3252a308e41e27bbd70fa937b86e80396de71b009f0be"
+    },
+    {
+      "model": "B70",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B70_feedback.obj",
+      "file": "B70\\03_反馈最终结果.obj",
+      "sha256": "7ce27b8bb9b9ae4150d3252a308e41e27bbd70fa937b86e80396de71b009f0be"
+    },
+    {
+      "model": "B65",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B65\\source.obj",
+      "file": "B65\\00_原始三角网格.obj",
+      "sha256": "0769ba8aec0210574cb33232f1005db0526b082b0bfff4c933cea0cc3f1b0a8b"
+    },
+    {
+      "model": "B65",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B65_baseline.obj",
+      "file": "B65\\01_基线.obj",
+      "sha256": "d8899f7c208df5149caaeb5ed4ca65c153181010d0e758e2e3e9f071d1f85028"
+    },
+    {
+      "model": "B65",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B65_one_shot.obj",
+      "file": "B65\\02_一次性提案.obj",
+      "sha256": "4d33b4245b598f7812951d8bd2e1ed9da93c07c82f57f92974d0e623f156d57c"
+    },
+    {
+      "model": "B65",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B65_feedback.obj",
+      "file": "B65\\03_反馈最终结果.obj",
+      "sha256": "a040359108cade04c430a9a3e9d6d3672c878b4e6b84f9774415efda702afb3f"
+    },
+    {
+      "model": "B31",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B31\\source.obj",
+      "file": "B31\\00_原始三角网格.obj",
+      "sha256": "354098627576bf8cf324417b7c5498d4ab6efdd7028295d18163318881c9c564"
+    },
+    {
+      "model": "B31",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B31_baseline.obj",
+      "file": "B31\\01_基线.obj",
+      "sha256": "9a3d2780e2d6ce59756cdb5f0547fe09d58219a338f85a5a0abf0ed3957dcb39"
+    },
+    {
+      "model": "B31",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B31_one_shot.obj",
+      "file": "B31\\02_一次性提案.obj",
+      "sha256": "2986842708fa1712be366a26edb4dd5dff6bc5633398372c142b3a397573b966"
+    },
+    {
+      "model": "B31",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B31_feedback.obj",
+      "file": "B31\\03_反馈最终结果.obj",
+      "sha256": "9e1c2616737068135d030bfd95d090668d25115708d91025e70b5b62363f9763"
+    },
+    {
+      "model": "B73",
+      "stage": "source",
+      "source": "research://source-repository\\research_runs\\2026-09-20_cad_decision_v2\\heldout\\inputs\\B73\\source.obj",
+      "file": "B73\\00_原始三角网格.obj",
+      "sha256": "328b71eeddb21f2fe3c66d34ebe597d82f41451c28276c0ce2599874037644a5"
+    },
+    {
+      "model": "B73",
+      "stage": "baseline",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B73_baseline.obj",
+      "file": "B73\\01_基线.obj",
+      "sha256": "9fcdcb3ae5529adf79fd9a8b431f17c2a99f66f8b8e09cc436a0fd08d7a4dd53"
+    },
+    {
+      "model": "B73",
+      "stage": "one_shot",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B73_one_shot.obj",
+      "file": "B73\\02_一次性提案.obj",
+      "sha256": "ce83747e923e6692414ba51b4b6f96293ddc9039074c0ed9e35e376b8fb81d12"
+    },
+    {
+      "model": "B73",
+      "stage": "feedback",
+      "source": "research://windows-delivery\\paper_stage_20260920\\mesh_manual_review_v1\\obj\\B73_feedback.obj",
+      "file": "B73\\03_反馈最终结果.obj",
+      "sha256": "46b345673bcf4ec40e230c5b4021ed3ed667cb6f7f7f2054a8d26003fc11c713"
+    }
+  ]
+}

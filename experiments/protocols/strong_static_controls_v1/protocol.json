@@ -1,0 +1,13 @@
+{
+  "question": "Does bounded measured coordination improve upon strong static choices at comparable actual output counts?",
+  "data": "All twelve previously seen development models; no exclusions, no heldout claim.",
+  "coordinator": "Frozen v4 output for each model, including baseline fallback and the invalid B31 recommendation; no v5 adaptation during this study.",
+  "controls": "none/all/simple_defect whole-group constraints x uniform/original source-wide allocated sizes; simple method has no quota and keeps the same equality compatibility screen.",
+  "target": "Every model uses its frozen v4 recommended actual face count, including failures. Nominal targets do not imply matching.",
+  "limits": "One initial call and at most one inherited count correction per cell, 60s each backend stage, one thread, stiffness=0, max actual Q=2048. All outputs retained.",
+  "evaluation": "Identical full source references, samples, diagnostic thresholds, basic checks and both CGAL triangle-soup triangulations. Report newly deficient edges, positive edge regressions and CAD proxies. No method-specific unselected-set gate determines the comparison.",
+  "primary": "Within each static cell choose the strict-valid <=2048 output closest in actual Q to target; ties use earliest attempt. Call count-matched only within 5%. Compare deficit and RMS separately; report both-improved/both-worse/tradeoff/unmatched/invalid. Do not pick whichever of six cells makes the coordinator look best.",
+  "secondary": "Report every static condition separately and the static quality/count envelope. Static methods use at most 2 calls versus coordinator at most 12; include this cost advantage.",
+  "max_native_calls": 144,
+  "seen_data_hypothesis_test": true
+}

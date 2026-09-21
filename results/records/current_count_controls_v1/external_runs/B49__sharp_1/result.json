@@ -1,0 +1,2387 @@
+{
+  "process_success": true,
+  "quad_path": "research://source-repository/research_runs/2026-09-20_paper_stage_v1/current_count_controls_v1/external_runs/B49__sharp_1/quad.obj",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.21501471599913202,
+  "reused": false,
+  "quads": 531,
+  "basic_output_pass": true,
+  "all_main_deficit": 11.846657802628796,
+  "symmetric_rms_h": 0.0414097852208212,
+  "source_p95_h": 0.007456762713098772,
+  "output_p95_h": 0.005903871434903325,
+  "topology": {
+    "pure_quad": true,
+    "closed": true,
+    "connected": true,
+    "connected_components": 1,
+    "edge_manifold": true,
+    "vertex_manifold": true,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "nonmanifold_vertices": 0,
+    "degenerate_faces": 0,
+    "duplicate_faces": 0,
+    "euler_characteristic": 2,
+    "quad_count": 531,
+    "vertex_count": 533
+  },
+  "quality": {
+    "planarity_mean": 0.0017549545365889805,
+    "planarity_p95": 0.003437431532631337,
+    "planarity_max": 0.18897527283847815,
+    "scaled_jacobian_min": -0.9875315971215348,
+    "scaled_jacobian_p05": 0.9713955017730865,
+    "scaled_jacobian_mean": 0.987303469646595,
+    "inverted_or_concave_corners": 3,
+    "negative_quad_count": 2,
+    "nonpositive_quad_count": 2,
+    "intrinsic_scaled_jacobian_min": -0.9875315971215348,
+    "intrinsic_scaled_jacobian_p05": 0.9771396503473702,
+    "source_aligned_scaled_jacobian_min": 0.0008637252385582158,
+    "source_aligned_scaled_jacobian_p05": 0.9733485991681741
+  },
+  "review": {
+    "schema": "final-output-review.v1",
+    "basic_output_checks_pass": true,
+    "hard_failure_reasons": [],
+    "warnings": [
+      "nonpositive_projected_corner_quality"
+    ],
+    "used_vertex_euler": 2,
+    "source_euler": 2,
+    "orientation_conflict_edges": 0,
+    "bilinear_minimum_normalized_area": 0.00013286420029586971,
+    "bilinear_near_singular_count": 0,
+    "bilinear_near_singular_faces": [],
+    "old_nonpositive_projected_quad_count": 2,
+    "interpretation": "Basic topology and local patch rank only. Projected negative corners remain quality warnings. No global self-intersection, outward orientation, Hausdorff or application suitability certificate."
+  },
+  "edge_defects": [
+    {
+      "vertices": [
+        9,
+        11
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.37059047475990686,
+      "surface_loss": 0.019265596987951338,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.008233882250691852,
+      "surface_distance_p95_h": 0.0032267823294948933,
+      "weighted_defect": 0.004074870558519436,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004074870558519436
+    },
+    {
+      "vertices": [
+        9,
+        55
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.3705904778043669,
+      "surface_loss": 0.05510815773991984,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.015395591530935835,
+      "surface_distance_p95_h": 0.007642813029762706,
+      "weighted_defect": 0.011655938380412904,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011655938380412904
+    },
+    {
+      "vertices": [
+        11,
+        22
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.3705904747875297,
+      "surface_loss": 0.0027492518640302873,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.001925978966783095,
+      "surface_distance_p95_h": 0.0007292303196582799,
+      "weighted_defect": 0.0005814948525359979,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0005814948525359979
+    },
+    {
+      "vertices": [
+        22,
+        25
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.3705904760932037,
+      "surface_loss": 0.012205684565850822,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0026143490061431166,
+      "surface_distance_p95_h": 0.002297836428854097,
+      "weighted_defect": 0.0025816269744460153,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0025816269744460153
+    },
+    {
+      "vertices": [
+        25,
+        54
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.37059047580683235,
+      "surface_loss": 0.7708195914677903,
+      "unaligned_fraction": 0.7567567567567568,
+      "edge_distance_p95_h": 0.580574214443961,
+      "surface_distance_p95_h": 0.5702190040364814,
+      "weighted_defect": 0.32309800255598486,
+      "potential_loss_reduction_if_perfectly_repaired": 0.32309800255598486
+    },
+    {
+      "vertices": [
+        27,
+        28
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.5000000003377443,
+      "surface_loss": 0.03115188990882061,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.008329988276217143,
+      "surface_distance_p95_h": 0.007626871280747711,
+      "weighted_defect": 0.007969058374929304,
+      "potential_loss_reduction_if_perfectly_repaired": 0.007969058374929304
+    },
+    {
+      "vertices": [
+        27,
+        33
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.5000000039440236,
+      "surface_loss": 0.03204672044249837,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.014158839560917215,
+      "surface_distance_p95_h": 0.004601783036447026,
+      "weighted_defect": 0.008197967716268722,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008197967716268722
+    },
+    {
+      "vertices": [
+        28,
+        32
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.49999999890331104,
+      "surface_loss": 0.12452921062328438,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.017958576995094486,
+      "surface_distance_p95_h": 0.01579229631715097,
+      "weighted_defect": 0.03185619071261617,
+      "potential_loss_reduction_if_perfectly_repaired": 0.03185619071261617
+    },
+    {
+      "vertices": [
+        29,
+        30
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.500000000320825,
+      "surface_loss": 0.05161987333313772,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.023875287152804105,
+      "surface_distance_p95_h": 0.006592147438569378,
+      "weighted_defect": 0.013205034593032336,
+      "potential_loss_reduction_if_perfectly_repaired": 0.013205034593032336
+    },
+    {
+      "vertices": [
+        29,
+        39
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.4999999969714147,
+      "surface_loss": 0.013965054255565587,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.03248718416140953,
+      "surface_distance_p95_h": 0.0029759059013939443,
+      "weighted_defect": 0.0035724423830503947,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0035724423830503947
+    },
+    {
+      "vertices": [
+        30,
+        40
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.4999999960002077,
+      "surface_loss": 0.05930332219266111,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.016611623051305435,
+      "surface_distance_p95_h": 0.007508626087729885,
+      "weighted_defect": 0.015170560555524312,
+      "potential_loss_reduction_if_perfectly_repaired": 0.015170560555524312
+    },
+    {
+      "vertices": [
+        32,
+        48
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.5000000010769112,
+      "surface_loss": 0.0951403766827244,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.043343133956112945,
+      "surface_distance_p95_h": 0.014440312152938357,
+      "weighted_defect": 0.024338145099298075,
+      "potential_loss_reduction_if_perfectly_repaired": 0.024338145099298075
+    },
+    {
+      "vertices": [
+        33,
+        45
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519973432925,
+      "crease_weight": 0.5000000014752161,
+      "surface_loss": 0.04677590781974166,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.01609823697160621,
+      "surface_distance_p95_h": 0.005323575822848486,
+      "weighted_defect": 0.011965885311328629,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011965885311328629
+    },
+    {
+      "vertices": [
+        37,
+        39
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.4999999995534532,
+      "surface_loss": 0.07709663011696648,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.029355955748639147,
+      "surface_distance_p95_h": 0.015962315074334897,
+      "weighted_defect": 0.019722320114349087,
+      "potential_loss_reduction_if_perfectly_repaired": 0.019722320114349087
+    },
+    {
+      "vertices": [
+        37,
+        57
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.4999999970295525,
+      "surface_loss": 0.11889235626615614,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.025887760009409334,
+      "surface_distance_p95_h": 0.02301232936723284,
+      "weighted_defect": 0.030414209986048345,
+      "potential_loss_reduction_if_perfectly_repaired": 0.030414209986048345
+    },
+    {
+      "vertices": [
+        40,
+        42
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519973432925,
+      "crease_weight": 0.5000000010501113,
+      "surface_loss": 0.04488546663418194,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.010192357768083424,
+      "surface_distance_p95_h": 0.005799337514909818,
+      "weighted_defect": 0.011482285870393452,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011482285870393452
+    },
+    {
+      "vertices": [
+        42,
+        55
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.5000000000530485,
+      "surface_loss": 0.25399112312752437,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.04802371902077305,
+      "surface_distance_p95_h": 0.04239198161037567,
+      "weighted_defect": 0.06497423083122468,
+      "potential_loss_reduction_if_perfectly_repaired": 0.06497423083122468
+    },
+    {
+      "vertices": [
+        45,
+        54
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.4999999978686082,
+      "surface_loss": 0.8208354114636225,
+      "unaligned_fraction": 0.7878787878787878,
+      "edge_distance_p95_h": 0.5387643390416174,
+      "surface_distance_p95_h": 0.5360262472972157,
+      "weighted_defect": 0.41153000146546614,
+      "potential_loss_reduction_if_perfectly_repaired": 0.41153000146546614
+    },
+    {
+      "vertices": [
+        48,
+        51
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 33,
+      "length_h": 1.0232519943889336,
+      "crease_weight": 0.5000000022360791,
+      "surface_loss": 0.16173298095498137,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0490746844839444,
+      "surface_distance_p95_h": 0.049074684483944385,
+      "weighted_defect": 0.04137339901519141,
+      "potential_loss_reduction_if_perfectly_repaired": 0.04137339901519141
+    },
+    {
+      "vertices": [
+        51,
+        192
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 36,
+      "length_h": 1.1240173315206676,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.21465490929881442,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0447279883407126,
+      "surface_distance_p95_h": 0.0447279883407126,
+      "weighted_defect": 0.06031895958696607,
+      "potential_loss_reduction_if_perfectly_repaired": 0.06031895958696607
+    },
+    {
+      "vertices": [
+        54,
+        129
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0001"
+      ],
+      "sample_count": 31,
+      "length_h": 0.9633810681400573,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.5436171989183236,
+      "surface_distance_p95_h": 0.5408655385929715,
+      "weighted_defect": 0.48169053407002854,
+      "potential_loss_reduction_if_perfectly_repaired": 0.48169053407002854
+    },
+    {
+      "vertices": [
+        55,
+        61
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0002"
+      ],
+      "sample_count": 30,
+      "length_h": 0.9269298670961154,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.058248615264718556,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.02610891408518151,
+      "surface_distance_p95_h": 0.009009209510979494,
+      "weighted_defect": 0.013498095301464579,
+      "potential_loss_reduction_if_perfectly_repaired": 0.013498095301464579
+    },
+    {
+      "vertices": [
+        57,
+        73
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052881,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.8659635401833115,
+      "unaligned_fraction": 0.65625,
+      "edge_distance_p95_h": 0.22271438699091417,
+      "surface_distance_p95_h": 0.21679111218304686,
+      "weighted_defect": 0.37613345856494157,
+      "potential_loss_reduction_if_perfectly_repaired": 0.37613345856494157
+    },
+    {
+      "vertices": [
+        61,
+        72
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0002"
+      ],
+      "sample_count": 30,
+      "length_h": 0.9269298670961156,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01645819386849092,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.010580102379848943,
+      "surface_distance_p95_h": 0.00351999547645099,
+      "weighted_defect": 0.0038138978637905973,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0038138978637905973
+    },
+    {
+      "vertices": [
+        64,
+        65
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052883,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.7304412294731042,
+      "surface_distance_p95_h": 0.6263111457043791,
+      "weighted_defect": 0.494192764202644,
+      "potential_loss_reduction_if_perfectly_repaired": 0.494192764202644
+    },
+    {
+      "vertices": [
+        64,
+        73
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052881,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.48721105423157995,
+      "surface_distance_p95_h": 0.4277899620812883,
+      "weighted_defect": 0.49419276420264396,
+      "potential_loss_reduction_if_perfectly_repaired": 0.49419276420264396
+    },
+    {
+      "vertices": [
+        65,
+        67
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052881,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.9020910728751791,
+      "surface_distance_p95_h": 0.7329583716437666,
+      "weighted_defect": 0.49419276420264396,
+      "potential_loss_reduction_if_perfectly_repaired": 0.49419276420264396
+    },
+    {
+      "vertices": [
+        67,
+        68
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052884,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.8667545320485857,
+      "surface_distance_p95_h": 0.733726951083976,
+      "weighted_defect": 0.4941927642026441,
+      "potential_loss_reduction_if_perfectly_repaired": 0.4941927642026441
+    },
+    {
+      "vertices": [
+        68,
+        70
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052879,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 1.0,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.9407167607350797,
+      "surface_distance_p95_h": 0.7635626709008512,
+      "weighted_defect": 0.49419276420264385,
+      "potential_loss_reduction_if_perfectly_repaired": 0.49419276420264385
+    },
+    {
+      "vertices": [
+        70,
+        72
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0002"
+      ],
+      "sample_count": 32,
+      "length_h": 0.9883855284052884,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.9218210963906065,
+      "unaligned_fraction": 1.0,
+      "edge_distance_p95_h": 0.7771100916367938,
+      "surface_distance_p95_h": 0.5359332142235302,
+      "weighted_defect": 0.47487503996411495,
+      "potential_loss_reduction_if_perfectly_repaired": 0.47487503996411495
+    },
+    {
+      "vertices": [
+        72,
+        91
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.010234690204065628,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.00805094121046983,
+      "surface_distance_p95_h": 0.00220632364534517,
+      "weighted_defect": 0.002920665359237511,
+      "potential_loss_reduction_if_perfectly_repaired": 0.002920665359237511
+    },
+    {
+      "vertices": [
+        84,
+        91
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.005707505239232303,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0009692634398310221,
+      "surface_distance_p95_h": 0.0008914718073248691,
+      "weighted_defect": 0.0016287462060425154,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0016287462060425154
+    },
+    {
+      "vertices": [
+        84,
+        118
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01093025844301813,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0012932975176465089,
+      "surface_distance_p95_h": 0.0011842244445103576,
+      "weighted_defect": 0.0031191591113676354,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0031191591113676354
+    },
+    {
+      "vertices": [
+        98,
+        102
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.017906843442761177,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002764358133266438,
+      "surface_distance_p95_h": 0.0024676056592009207,
+      "weighted_defect": 0.005110061593831764,
+      "potential_loss_reduction_if_perfectly_repaired": 0.005110061593831764
+    },
+    {
+      "vertices": [
+        98,
+        107
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.030366322678976196,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0034548900814523925,
+      "surface_distance_p95_h": 0.003317358877423236,
+      "weighted_defect": 0.008665613220093661,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008665613220093661
+    },
+    {
+      "vertices": [
+        102,
+        110
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.006367066406871681,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0011890422640799176,
+      "surface_distance_p95_h": 0.0010771550732707469,
+      "weighted_defect": 0.0018169646490255136,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0018169646490255136
+    },
+    {
+      "vertices": [
+        105,
+        106
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.004906575529657209,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.001362752790653738,
+      "surface_distance_p95_h": 0.0006161900200273825,
+      "weighted_defect": 0.0014001855352944264,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0014001855352944264
+    },
+    {
+      "vertices": [
+        105,
+        115
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.013393043395009421,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0038434746250237306,
+      "surface_distance_p95_h": 0.0032256774994775155,
+      "weighted_defect": 0.0038219620837209207,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0038219620837209207
+    },
+    {
+      "vertices": [
+        106,
+        107
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01845308072475421,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0033488347402560294,
+      "surface_distance_p95_h": 0.00321701114848141,
+      "weighted_defect": 0.005265940890188713,
+      "potential_loss_reduction_if_perfectly_repaired": 0.005265940890188713
+    },
+    {
+      "vertices": [
+        110,
+        117
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.006114729464415704,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0015960643054916523,
+      "surface_distance_p95_h": 0.0014779087544308483,
+      "weighted_defect": 0.0017449554575412107,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0017449554575412107
+    },
+    {
+      "vertices": [
+        112,
+        113
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.02592429456251148,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003873057411040466,
+      "surface_distance_p95_h": 0.0035070508544881957,
+      "weighted_defect": 0.007397995208620887,
+      "potential_loss_reduction_if_perfectly_repaired": 0.007397995208620887
+    },
+    {
+      "vertices": [
+        112,
+        123
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.048166541370605366,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.006545086536084256,
+      "surface_distance_p95_h": 0.006282203198796345,
+      "weighted_defect": 0.013745247393958685,
+      "potential_loss_reduction_if_perfectly_repaired": 0.013745247393958685
+    },
+    {
+      "vertices": [
+        113,
+        119
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.009232293429871214,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002058341803081921,
+      "surface_distance_p95_h": 0.0019127449590510095,
+      "weighted_defect": 0.0026346121933646383,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0026346121933646383
+    },
+    {
+      "vertices": [
+        114,
+        115
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.059589138162773954,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0077165671422509095,
+      "surface_distance_p95_h": 0.007452957000196558,
+      "weighted_defect": 0.01700490470631893,
+      "potential_loss_reduction_if_perfectly_repaired": 0.01700490470631893
+    },
+    {
+      "vertices": [
+        114,
+        135
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.08951375442029029,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.011589717222782426,
+      "surface_distance_p95_h": 0.011589717222782426,
+      "weighted_defect": 0.0255444685181366,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0255444685181366
+    },
+    {
+      "vertices": [
+        117,
+        133
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015830093105399234,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0020893132807629786,
+      "surface_distance_p95_h": 0.0019335413921419584,
+      "weighted_defect": 0.004517421010757898,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004517421010757898
+    },
+    {
+      "vertices": [
+        118,
+        122
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.013514771469563496,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.00215436578983114,
+      "surface_distance_p95_h": 0.0020241570919478074,
+      "weighted_defect": 0.0038566995270150556,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0038566995270150556
+    },
+    {
+      "vertices": [
+        119,
+        131
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.013451177585641653,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002648938367449476,
+      "surface_distance_p95_h": 0.002466558954401381,
+      "weighted_defect": 0.003838551791213916,
+      "potential_loss_reduction_if_perfectly_repaired": 0.003838551791213916
+    },
+    {
+      "vertices": [
+        122,
+        131
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.019919843054476267,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0026417680670034393,
+      "surface_distance_p95_h": 0.0025017256635351034,
+      "weighted_defect": 0.005684509683306844,
+      "potential_loss_reduction_if_perfectly_repaired": 0.005684509683306844
+    },
+    {
+      "vertices": [
+        123,
+        133
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.06289211746394972,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.007241632265481858,
+      "surface_distance_p95_h": 0.007055389059577937,
+      "weighted_defect": 0.017947473268227182,
+      "potential_loss_reduction_if_perfectly_repaired": 0.017947473268227182
+    },
+    {
+      "vertices": [
+        126,
+        127
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0001"
+      ],
+      "sample_count": 31,
+      "length_h": 0.9633810681400572,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.011376274639933815,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0051708650994215346,
+      "surface_distance_p95_h": 0.002116570753894443,
+      "weighted_defect": 0.00273992190351852,
+      "potential_loss_reduction_if_perfectly_repaired": 0.00273992190351852
+    },
+    {
+      "vertices": [
+        126,
+        129
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0001"
+      ],
+      "sample_count": 31,
+      "length_h": 0.9633810681400572,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.2351072210085803,
+      "unaligned_fraction": 0.25806451612903225,
+      "edge_distance_p95_h": 0.10974974115262472,
+      "surface_distance_p95_h": 0.10974974115262472,
+      "weighted_defect": 0.11877807872503014,
+      "potential_loss_reduction_if_perfectly_repaired": 0.11877807872503014
+    },
+    {
+      "vertices": [
+        127,
+        135
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0000",
+        "geometry-0001"
+      ],
+      "sample_count": 31,
+      "length_h": 0.9633810681400573,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.043521733655661275,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.012214654675082969,
+      "surface_distance_p95_h": 0.006341101807961168,
+      "weighted_defect": 0.010482003564124508,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010482003564124508
+    },
+    {
+      "vertices": [
+        131,
+        275
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.004769448384161925,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0014223085213523419,
+      "surface_distance_p95_h": 0.0008704757783644207,
+      "weighted_defect": 0.0013610536714398563,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0013610536714398563
+    },
+    {
+      "vertices": [
+        133,
+        397
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03236868891365336,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0049202853501089956,
+      "surface_distance_p95_h": 0.0049202853501089956,
+      "weighted_defect": 0.00923702687126654,
+      "potential_loss_reduction_if_perfectly_repaired": 0.00923702687126654
+    },
+    {
+      "vertices": [
+        135,
+        168
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.12779243752525127,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.017955227663417964,
+      "surface_distance_p95_h": 0.01617653948211454,
+      "weighted_defect": 0.03646802570577659,
+      "potential_loss_reduction_if_perfectly_repaired": 0.03646802570577659
+    },
+    {
+      "vertices": [
+        167,
+        168
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.2715094411709248,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.042223919244825416,
+      "surface_distance_p95_h": 0.04016107398092887,
+      "weighted_defect": 0.07748043211106168,
+      "potential_loss_reduction_if_perfectly_repaired": 0.07748043211106168
+    },
+    {
+      "vertices": [
+        167,
+        176
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.3790210738467779,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.058312131388205825,
+      "surface_distance_p95_h": 0.056209665918519794,
+      "weighted_defect": 0.10816094075476214,
+      "potential_loss_reduction_if_perfectly_repaired": 0.10816094075476214
+    },
+    {
+      "vertices": [
+        175,
+        181
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015237165805323222,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0022658616187584604,
+      "surface_distance_p95_h": 0.0017491435893993853,
+      "weighted_defect": 0.00434821782127686,
+      "potential_loss_reduction_if_perfectly_repaired": 0.00434821782127686
+    },
+    {
+      "vertices": [
+        175,
+        188
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.036844795652517935,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.008821965766923841,
+      "surface_distance_p95_h": 0.006653911159543202,
+      "weighted_defect": 0.010514369871962168,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010514369871962168
+    },
+    {
+      "vertices": [
+        176,
+        186
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.06488581840810387,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.024998442381752087,
+      "surface_distance_p95_h": 0.008803438387185242,
+      "weighted_defect": 0.018516414112372814,
+      "potential_loss_reduction_if_perfectly_repaired": 0.018516414112372814
+    },
+    {
+      "vertices": [
+        181,
+        190
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.008658919378493255,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0014209844455752802,
+      "surface_distance_p95_h": 0.001292193441728856,
+      "weighted_defect": 0.002470988898828567,
+      "potential_loss_reduction_if_perfectly_repaired": 0.002470988898828567
+    },
+    {
+      "vertices": [
+        182,
+        189
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0033027909790931623,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0004969743911380953,
+      "surface_distance_p95_h": 0.0004969743911380953,
+      "weighted_defect": 0.0009425148205861304,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0009425148205861304
+    },
+    {
+      "vertices": [
+        182,
+        191
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0047717356646276715,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0021881609272691805,
+      "surface_distance_p95_h": 0.0006223559181050015,
+      "weighted_defect": 0.0013617063908373142,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0013617063908373142
+    },
+    {
+      "vertices": [
+        186,
+        188
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.08545969946390652,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.024794710198083495,
+      "surface_distance_p95_h": 0.009190125430981053,
+      "weighted_defect": 0.024387566097108588,
+      "potential_loss_reduction_if_perfectly_repaired": 0.024387566097108588
+    },
+    {
+      "vertices": [
+        189,
+        196
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.009651174833218245,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002313688515813506,
+      "surface_distance_p95_h": 0.0021845457543119675,
+      "weighted_defect": 0.0027541480444740816,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0027541480444740816
+    },
+    {
+      "vertices": [
+        190,
+        194
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01206772209193344,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002395842813300661,
+      "surface_distance_p95_h": 0.0016185751355187504,
+      "weighted_defect": 0.0034437562032717116,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0034437562032717116
+    },
+    {
+      "vertices": [
+        191,
+        201
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.019871339793491625,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004387679350764879,
+      "surface_distance_p95_h": 0.0030500861232027874,
+      "weighted_defect": 0.00567066834650589,
+      "potential_loss_reduction_if_perfectly_repaired": 0.00567066834650589
+    },
+    {
+      "vertices": [
+        192,
+        193
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 36,
+      "length_h": 1.1240173315206674,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.021090876538830718,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003076498024877589,
+      "surface_distance_p95_h": 0.0030764980248775887,
+      "weighted_defect": 0.0059266276916520874,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0059266276916520874
+    },
+    {
+      "vertices": [
+        193,
+        197
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 36,
+      "length_h": 1.124017320105899,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.022633223524508923,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003011112348823228,
+      "surface_distance_p95_h": 0.0029545310570565646,
+      "weighted_defect": 0.006360033812844076,
+      "potential_loss_reduction_if_perfectly_repaired": 0.006360033812844076
+    },
+    {
+      "vertices": [
+        194,
+        203
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0003"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03107840850343061,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.016172679500026762,
+      "surface_distance_p95_h": 0.007639919861275042,
+      "weighted_defect": 0.008868820582389974,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008868820582389974
+    },
+    {
+      "vertices": [
+        196,
+        203
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.02527321188676655,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.010979362134905734,
+      "surface_distance_p95_h": 0.0059620643889280265,
+      "weighted_defect": 0.007212196266089876,
+      "potential_loss_reduction_if_perfectly_repaired": 0.007212196266089876
+    },
+    {
+      "vertices": [
+        197,
+        201
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0001"
+      ],
+      "sample_count": 36,
+      "length_h": 1.1240173315206679,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.011680212442063556,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003503048600872564,
+      "surface_distance_p95_h": 0.002012355627954813,
+      "weighted_defect": 0.003282190305180695,
+      "potential_loss_reduction_if_perfectly_repaired": 0.003282190305180695
+    },
+    {
+      "vertices": [
+        201,
+        277
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03509434710765186,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004082007037207207,
+      "surface_distance_p95_h": 0.0037739401619740274,
+      "weighted_defect": 0.010014845770481581,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010014845770481581
+    },
+    {
+      "vertices": [
+        203,
+        409
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03549739563835705,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.01107251593567921,
+      "surface_distance_p95_h": 0.00784503743721314,
+      "weighted_defect": 0.010129863407386175,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010129863407386175
+    },
+    {
+      "vertices": [
+        214,
+        216
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0037042584131779417,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0007301886650806981,
+      "surface_distance_p95_h": 0.0006731443167137623,
+      "weighted_defect": 0.0010570812612125011,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0010570812612125011
+    },
+    {
+      "vertices": [
+        214,
+        217
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015224742221749233,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0028856460001618752,
+      "surface_distance_p95_h": 0.0024928936472310838,
+      "weighted_defect": 0.004344672513167023,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004344672513167023
+    },
+    {
+      "vertices": [
+        216,
+        270
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.007967171925172536,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.001202345686843938,
+      "surface_distance_p95_h": 0.0009305982768260674,
+      "weighted_defect": 0.0022735854812388464,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0022735854812388464
+    },
+    {
+      "vertices": [
+        217,
+        218
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.025665441525473832,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.00402240276841357,
+      "surface_distance_p95_h": 0.00344268105296575,
+      "weighted_defect": 0.007324126524436488,
+      "potential_loss_reduction_if_perfectly_repaired": 0.007324126524436488
+    },
+    {
+      "vertices": [
+        218,
+        223
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.013231223179830479,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0016488161144638898,
+      "surface_distance_p95_h": 0.001537923778061873,
+      "weighted_defect": 0.003775783578316844,
+      "potential_loss_reduction_if_perfectly_repaired": 0.003775783578316844
+    },
+    {
+      "vertices": [
+        223,
+        276
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015523570827896304,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0017884944161220423,
+      "surface_distance_p95_h": 0.0016124541546764164,
+      "weighted_defect": 0.004429948993541219,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004429948993541219
+    },
+    {
+      "vertices": [
+        253,
+        267
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015461620661742977,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002330024645666695,
+      "surface_distance_p95_h": 0.00208764976160509,
+      "weighted_defect": 0.004412270324165262,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004412270324165262
+    },
+    {
+      "vertices": [
+        253,
+        269
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01499898697777102,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0021281660890110307,
+      "surface_distance_p95_h": 0.0019061781352239827,
+      "weighted_defect": 0.004280248919720935,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004280248919720935
+    },
+    {
+      "vertices": [
+        254,
+        259
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.030985636788929693,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0044813087375269265,
+      "surface_distance_p95_h": 0.0041809541275199735,
+      "weighted_defect": 0.008842346392408896,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008842346392408896
+    },
+    {
+      "vertices": [
+        254,
+        277
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01654368618624617,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003230107810851181,
+      "surface_distance_p95_h": 0.0029327297488068544,
+      "weighted_defect": 0.004721058497605648,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004721058497605648
+    },
+    {
+      "vertices": [
+        259,
+        262
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.012811663515367108,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.002148100918087292,
+      "surface_distance_p95_h": 0.002086268749228065,
+      "weighted_defect": 0.0036560541723750103,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0036560541723750103
+    },
+    {
+      "vertices": [
+        262,
+        267
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.015252493087508291,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0026521785563257878,
+      "surface_distance_p95_h": 0.002577237580876709,
+      "weighted_defect": 0.004352591755537362,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004352591755537362
+    },
+    {
+      "vertices": [
+        263,
+        265
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.011030196708857765,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0018237108278135721,
+      "surface_distance_p95_h": 0.0016320255943515995,
+      "weighted_defect": 0.0031476784143734207,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0031476784143734207
+    },
+    {
+      "vertices": [
+        263,
+        269
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.011214939012581587,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.001489095187813849,
+      "surface_distance_p95_h": 0.001332998227463834,
+      "weighted_defect": 0.003200398177855618,
+      "potential_loss_reduction_if_perfectly_repaired": 0.003200398177855618
+    },
+    {
+      "vertices": [
+        265,
+        294
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.014496656038470597,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0031532289192381232,
+      "surface_distance_p95_h": 0.0031532289192381232,
+      "weighted_defect": 0.0041368991412679265,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0041368991412679265
+    },
+    {
+      "vertices": [
+        270,
+        275
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0038774736249230102,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0008966257355084666,
+      "surface_distance_p95_h": 0.0007419768331570976,
+      "weighted_defect": 0.0011065115476745035,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0011065115476745035
+    },
+    {
+      "vertices": [
+        276,
+        288
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01669106597674715,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0021191332245173704,
+      "surface_distance_p95_h": 0.001935143541376097,
+      "weighted_defect": 0.004763116150566839,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004763116150566839
+    },
+    {
+      "vertices": [
+        288,
+        294
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01758061903822291,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0030848628854462006,
+      "surface_distance_p95_h": 0.0028856184442609856,
+      "weighted_defect": 0.005016967196378061,
+      "potential_loss_reduction_if_perfectly_repaired": 0.005016967196378061
+    },
+    {
+      "vertices": [
+        294,
+        470
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.030430878612053867,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004627753623943263,
+      "surface_distance_p95_h": 0.0042933217400188545,
+      "weighted_defect": 0.008684035495093084,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008684035495093084
+    },
+    {
+      "vertices": [
+        354,
+        373
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0314273853474545,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004302646500186292,
+      "surface_distance_p95_h": 0.0038718310320249067,
+      "weighted_defect": 0.008968407825305417,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008968407825305417
+    },
+    {
+      "vertices": [
+        354,
+        397
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.018048112460956788,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0025794428260051696,
+      "surface_distance_p95_h": 0.00237579716676759,
+      "weighted_defect": 0.0051503754205867265,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0051503754205867265
+    },
+    {
+      "vertices": [
+        360,
+        390
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.006956120006744951,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0018723629582185967,
+      "surface_distance_p95_h": 0.001708283456122776,
+      "weighted_defect": 0.0019850624037773467,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0019850624037773467
+    },
+    {
+      "vertices": [
+        360,
+        407
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0009272709177231371,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.00021980226223041252,
+      "surface_distance_p95_h": 0.0001552197483991693,
+      "weighted_defect": 0.00026461456028698536,
+      "potential_loss_reduction_if_perfectly_repaired": 0.00026461456028698536
+    },
+    {
+      "vertices": [
+        363,
+        390
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.02554684499244965,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0030901309696205006,
+      "surface_distance_p95_h": 0.00277269807774931,
+      "weighted_defect": 0.007290282726644563,
+      "potential_loss_reduction_if_perfectly_repaired": 0.007290282726644563
+    },
+    {
+      "vertices": [
+        363,
+        391
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03279672327247515,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004046706861735094,
+      "surface_distance_p95_h": 0.003632714265084745,
+      "weighted_defect": 0.009359174693960541,
+      "potential_loss_reduction_if_perfectly_repaired": 0.009359174693960541
+    },
+    {
+      "vertices": [
+        366,
+        391
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03385251650272394,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003953076359732071,
+      "surface_distance_p95_h": 0.003546194837211378,
+      "weighted_defect": 0.009660465563798513,
+      "potential_loss_reduction_if_perfectly_repaired": 0.009660465563798513
+    },
+    {
+      "vertices": [
+        366,
+        392
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03896351881936618,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004447436035263638,
+      "surface_distance_p95_h": 0.004085699868514332,
+      "weighted_defect": 0.011118988207822448,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011118988207822448
+    },
+    {
+      "vertices": [
+        369,
+        394
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0016268517476528382,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0007760101720908254,
+      "surface_distance_p95_h": 0.00042364656340159406,
+      "weighted_defect": 0.0004642533822955547,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0004642533822955547
+    },
+    {
+      "vertices": [
+        369,
+        395
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.01658113201856954,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0037968003016975544,
+      "surface_distance_p95_h": 0.0031444203173870188,
+      "weighted_defect": 0.004731744384831745,
+      "potential_loss_reduction_if_perfectly_repaired": 0.004731744384831745
+    },
+    {
+      "vertices": [
+        370,
+        395
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.038671977426478175,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.005073436614559768,
+      "surface_distance_p95_h": 0.004570649707300003,
+      "weighted_defect": 0.011035791273668681,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011035791273668681
+    },
+    {
+      "vertices": [
+        370,
+        396
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.02883210278187244,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.003678732230560031,
+      "surface_distance_p95_h": 0.0033039577905115136,
+      "weighted_defect": 0.008227794114915091,
+      "potential_loss_reduction_if_perfectly_repaired": 0.008227794114915091
+    },
+    {
+      "vertices": [
+        373,
+        396
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.038786093203133094,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.004722168671532363,
+      "surface_distance_p95_h": 0.004244022432335236,
+      "weighted_defect": 0.011068356401598603,
+      "potential_loss_reduction_if_perfectly_repaired": 0.011068356401598603
+    },
+    {
+      "vertices": [
+        392,
+        410
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03722307005121497,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0044725912505987975,
+      "surface_distance_p95_h": 0.0041586430497525485,
+      "weighted_defect": 0.010622317734626536,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010622317734626536
+    },
+    {
+      "vertices": [
+        393,
+        394
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.001792070249403359,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0002828346477118471,
+      "surface_distance_p95_h": 0.0002124760227270637,
+      "weighted_defect": 0.0005114016540210811,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0005114016540210811
+    },
+    {
+      "vertices": [
+        393,
+        416
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0004"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.04836258871123107,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.016743666275122304,
+      "surface_distance_p95_h": 0.010391667985224081,
+      "weighted_defect": 0.01380119326678136,
+      "potential_loss_reduction_if_perfectly_repaired": 0.01380119326678136
+    },
+    {
+      "vertices": [
+        407,
+        409
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.0026587286048883685,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0005546989036727434,
+      "surface_distance_p95_h": 0.00035000087320105963,
+      "weighted_defect": 0.0007587192558917575,
+      "potential_loss_reduction_if_perfectly_repaired": 0.0007587192558917575
+    },
+    {
+      "vertices": [
+        410,
+        416
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0003",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.06134964724099767,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.01703490616578624,
+      "surface_distance_p95_h": 0.010635963261119293,
+      "weighted_defect": 0.017507299774158762,
+      "potential_loss_reduction_if_perfectly_repaired": 0.017507299774158762
+    },
+    {
+      "vertices": [
+        416,
+        471
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.08424768869377063,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.015271624662762974,
+      "surface_distance_p95_h": 0.010936127672738284,
+      "weighted_defect": 0.02404169555283432,
+      "potential_loss_reduction_if_perfectly_repaired": 0.02404169555283432
+    },
+    {
+      "vertices": [
+        460,
+        461
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.005715282065241917,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0018008756738789908,
+      "surface_distance_p95_h": 0.0016452537419471072,
+      "weighted_defect": 0.001630965472662044,
+      "potential_loss_reduction_if_perfectly_repaired": 0.001630965472662044
+    },
+    {
+      "vertices": [
+        460,
+        470
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.012518491593049226,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.0033692537114533155,
+      "surface_distance_p95_h": 0.003167317432295604,
+      "weighted_defect": 0.003572391935341713,
+      "potential_loss_reduction_if_perfectly_repaired": 0.003572391935341713
+    },
+    {
+      "vertices": [
+        461,
+        471
+      ],
+      "layer": "main",
+      "group_ids": [
+        "geometry-0004",
+        "geometry-0005"
+      ],
+      "sample_count": 37,
+      "length_h": 1.141476801350492,
+      "crease_weight": 0.4999999999999999,
+      "surface_loss": 0.03845279628767954,
+      "unaligned_fraction": 0.0,
+      "edge_distance_p95_h": 0.005828306425821008,
+      "surface_distance_p95_h": 0.005569940815447574,
+      "weighted_defect": 0.010973243727360625,
+      "potential_loss_reduction_if_perfectly_repaired": 0.010973243727360625
+    }
+  ],
+  "intermediate_uv": "Not applicable to backend-neutral final-output evaluation.",
+  "id": "B49__sharp_1",
+  "model": "B49",
+  "variant": "sharp",
+  "attempt": 1,
+  "target_quads": 528,
+  "requested_faces": 571,
+  "protected_deficit": 6.961026808355433,
+  "common_positive_regression": 3.9696333235814634,
+  "newly_deficient_edges": 4,
+  "newly_deficient_length_h": 4.0566244660358945,
+  "unresolved_deficient_edges": [
+    [
+      25,
+      54
+    ],
+    [
+      45,
+      54
+    ],
+    [
+      54,
+      129
+    ],
+    [
+      57,
+      73
+    ],
+    [
+      64,
+      65
+    ],
+    [
+      64,
+      73
+    ],
+    [
+      65,
+      67
+    ],
+    [
+      67,
+      68
+    ],
+    [
+      68,
+      70
+    ],
+    [
+      70,
+      72
+    ],
+    [
+      126,
+      129
+    ]
+  ],
+  "strict_output_pass": false,
+  "intersection_clear": false
+}

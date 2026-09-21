@@ -1,0 +1,26 @@
+{
+  "role": "Same primary research method, next frozen development version; all 12 inputs seen.",
+  "changes": [
+    "Use the simpler mean-deficit initial ordering, equal selected sets on all 12 prior development cases.",
+    "Apply the existing exact triangle-soup check to parents and final decisions.",
+    "Allow unchanged aggregate-protection violations to trigger constraint and size repair.",
+    "Scan unexpanded parents when a parent has no operation, with explicit total visit and solve caps."
+  ],
+  "variants": [
+    "full",
+    "no_protection_feedback",
+    "no_size",
+    "no_constraint",
+    "no_recovery",
+    "initial_only"
+  ],
+  "max_logical_attempts_per_cell": 12,
+  "max_parent_visits": 12,
+  "productive_rounds": 2,
+  "max_actual_quads": 2048,
+  "density_step": 2.0,
+  "max_native_calls_upper_bound": 864,
+  "acceptance": "Original aggregate defect/RMS/fixed-complement safeguards unchanged; strict geometry additionally required. No new engineering tolerance.",
+  "cache": "Exact source/field/binary/density/edge hashes and exact gsize, stiffness0, per-stage60s. Reuse is not independent evidence.",
+  "scope": "No family-heldout evidence and no presumption that main method beats one-shot proposal controls. Full matrix retained."
+}
