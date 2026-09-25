@@ -21,7 +21,7 @@ class ConditionalCoordinator(CoordinatorV5):
 
     def finish_early(self,stage):
         self.exit_stage=stage
-        decision=strict_decision(self.rows,2048)
+        decision=strict_decision(self.rows,self.max_quads,self.min_quads)
         self.trace.append(dict(stop=stage,activation_policy='conditional'))
         self.flush();save(self.out/'decision.json',decision)
         save(self.out/'complete.json',dict(attempts=self.attempts,native_calls=self.native,reused_attempts=self.reused,
@@ -33,13 +33,13 @@ class ConditionalCoordinator(CoordinatorV5):
     def branch(self,name,*args,**kwargs):
         super().branch(name,*args,**kwargs)
         if name=='initial_allocated':
-            decision=strict_decision(self.rows,2048)
+            decision=strict_decision(self.rows,self.max_quads,self.min_quads)
             if decision['recommended_id'] not in [None,'baseline']:
                 raise InitialProposalAccepted()
 
     def run(self):
         deficient=any(needs_repair(r) for r in self.base['edge_defects'] if r['layer']=='main')
-        base_decision=strict_decision(self.rows,2048)
+        base_decision=strict_decision(self.rows,self.max_quads,self.min_quads)
         if self.source_geometry_clear and not deficient and base_decision['recommended_id']=='baseline':
             return self.finish_early('baseline_no_diagnostic_feature_defect')
         try:

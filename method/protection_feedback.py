@@ -64,7 +64,7 @@ def simple_initial(group_edges,records,audit):
     return dict(selected_group_ids=chosen,selected_edges=[list(e) for e in sorted(selected)],trace=trace,order=order,
         policy='Whole diagnostically needed groups, descending length-weighted average deficit, greedy fixed-frame compatibility; no quota.')
 
-def size_repair(mesh,graph,h,baseline,parent,density,target,step,initial_selected,include_protection=True,prior_requested=None):
+def size_repair(mesh,graph,h,baseline,parent,density,target,step,initial_selected,include_protection=True,prior_requested=None,max_quads=2048):
     if not math.isfinite(step) or step<=1:raise ValueError('Feedback density multiplier must exceed one')
     required,triggers=repair_edges(parent['edge_defects'],baseline['edge_defects'],initial_selected,include_protection)
     before={key(r):r for r in baseline['edge_defects'] if r['layer']=='main'}
@@ -84,7 +84,7 @@ def size_repair(mesh,graph,h,baseline,parent,density,target,step,initial_selecte
     weights=req['areas']/req['areas'].sum()
     raw_count=float(baseline['quads']*(weights@((h/req['raw_vertex_sizes'][mesh.faces].min(axis=1))**2)))
     floored_count=float(baseline['quads']*(weights@((h/req['vertex_sizes'][mesh.faces].min(axis=1))**2)))
-    new_target=min(2048,max(target,math.ceil(floored_count-1e-10)))
+    new_target=min(max_quads,max(target,math.ceil(floored_count-1e-10)))
     rho,hv,allocation=allocate(mesh,h,req,new_target/baseline['quads'])
     return dict(density=rho,requested=requested,target=new_target,vertex_sizes=hv,
         audit=dict(trigger_edges=[r['vertices'] for r in active],density_step=step,raw_count_estimate=raw_count,

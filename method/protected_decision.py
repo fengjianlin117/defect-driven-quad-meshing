@@ -5,7 +5,7 @@ from candidate_decision import decide
 def no_worse(value,reference):
     return math.isfinite(value) and value<=reference+1e-9*max(1.,abs(reference))
 
-def decide_protected(candidates,max_quads):
+def decide_protected(candidates,max_quads,min_quads=0):
     previous=decide(candidates,max_quads)
     bases=[r for r in candidates if r['id']=='baseline']
     if len(bases)!=1:raise ValueError('Exactly one measured baseline is required')
@@ -15,6 +15,7 @@ def decide_protected(candidates,max_quads):
     for r in candidates:
         reasons=[]
         if r['id'] not in previous['eligible_ids']:reasons.append('basic_or_resource_checks_failed')
+        if r.get('quads',0)<min_quads:reasons.append('actual_count_below_resolution_floor')
         for key in keys:
             v=r.get(key)
             if not isinstance(v,(int,float)) or not math.isfinite(v) or v<0:reasons.append('missing_or_invalid_'+key)

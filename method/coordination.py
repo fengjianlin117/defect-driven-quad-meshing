@@ -40,7 +40,7 @@ def constraint_operation(group_edges,chosen,records,audit,max_screenings=64):
     return dict(proposal=best,alternatives=options,trace=trace,screening_calls=count,
         budget_exhausted=count>=max_screenings,unaddressed_deficient_edges=[list(e) for e in sorted(deficient-selected)])
 
-def size_operation(mesh,graph,h,baseline,parent,density,target,step,prior_requested=None):
+def size_operation(mesh,graph,h,baseline,parent,density,target,step,prior_requested=None,max_quads=2048):
     if not math.isfinite(step) or step<=1:raise ValueError('Feedback density multiplier must exceed one')
     b={key(r):r for r in baseline['edge_defects'] if r['layer']=='main'}
     active=[r for r in parent['edge_defects'] if r['layer']=='main' and loss(r)>loss(b[key(r)])+1e-9 and needs_repair(r)]
@@ -59,7 +59,7 @@ def size_operation(mesh,graph,h,baseline,parent,density,target,step,prior_reques
     weights=req['areas']/req['areas'].sum()
     raw_count=float(baseline['quads']*(weights@((h/req['raw_vertex_sizes'][mesh.faces].min(axis=1))**2)))
     floored_count=float(baseline['quads']*(weights@((h/req['vertex_sizes'][mesh.faces].min(axis=1))**2)))
-    new_target=min(2048,max(target,math.ceil(floored_count-1e-10)))
+    new_target=min(max_quads,max(target,math.ceil(floored_count-1e-10)))
     rho,hv,allocation=allocate(mesh,h,req,new_target/baseline['quads'])
     return dict(density=rho,requested=requested,target=new_target,vertex_sizes=hv,
         audit=dict(trigger_edges=[r['vertices'] for r in active],density_step=step,raw_count_estimate=raw_count,

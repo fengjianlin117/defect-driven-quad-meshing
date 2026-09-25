@@ -9,8 +9,8 @@ from weak_layout_pipeline.pipeline.mesh import load_obj
 from protection_feedback import constraint_repair,size_repair,simple_initial
 from coordination import common_metrics
 
-def strict_decision(rows, cap):
-    result=decide_protected(rows,cap)
+def strict_decision(rows, cap, min_quads=0):
+    result=decide_protected(rows,cap,min_quads)
     eligible=set(result['eligible_ids'])
     for row in result['audit']:
         candidate=next(c for c in rows if c['id']==row['id'])
@@ -38,7 +38,7 @@ class CoordinatorV5(Coordinator):
         self.source_geometry_clear=source_audit['clear']
         self.rows[0].update(self.decorate(self.rows[0],self.inp/'quad.obj',self.out/'baseline_intersection.json'))
         policy=dict(POLICY)
-        policy.update(version=5,variant=variant,actual_density_step=step,
+        policy.update(version=5,variant=variant,actual_density_step=step,max_actual_quads=self.max_quads,min_actual_quads=self.min_quads,
             initial='Whole needed groups ordered by length-weighted average deficit, fixed-frame compatibility, no quota; uniform and source-wide allocated initial densities.',
             parent='Lowest whole-reference deficit among unexpanded strict-valid generated candidates; RMS and id break ties.',
             stopping='Two productive rounds, twelve logical attempts, twelve parent visits, or no unexpanded actionable candidate; skip no-op parents except the registered stop_first_noop ablation.',
@@ -103,7 +103,7 @@ class CoordinatorV5(Coordinator):
             for round_id in range(2):
                 productive=False
                 while self.attempts<12 and visits<12:
-                    valid=[r for r in self.rows[1:] if r.get('strict_output_pass') and r.get('quads',2049)<=2048 and r['id'] not in expanded]
+                    valid=[r for r in self.rows[1:] if r.get('strict_output_pass') and self.min_quads<=r.get('quads',self.max_quads+1)<=self.max_quads and r['id'] not in expanded]
                     before=self.attempts
                     if valid:
                         parent=min(valid,key=lambda r:(r['all_main_deficit'],r['symmetric_rms_h'],r['id']))
@@ -114,10 +114,10 @@ class CoordinatorV5(Coordinator):
                             if result['proposal']:
                                 self.branch(f'r{round_id}_constraint',result['proposal']['groups'],state['density'],state['g'],state['target'],state['requested'])
                         if self.variant!='no_size':
-                            result=size_repair(self.mesh,self.graph,self.h,self.base,parent,state['density']*(state['g']/self.p['gsize']),state['target'],self.step,self.initial_selected,self.requested_variant!='no_protection_feedback',state['requested'])
+                            result=size_repair(self.mesh,self.graph,self.h,self.base,parent,state['density']*(state['g']/self.p['gsize']),state['target'],self.step,self.initial_selected,self.requested_variant!='no_protection_feedback',state['requested'],max_quads=self.max_quads)
                             self.trace.append(dict(round=round_id,operation='size',parent=parent['id'],audit=result['audit'] if result else None))
                             if result is not None:self.branch(f'r{round_id}_size',state['groups'],result['density'],self.p['gsize'],result['target'],result['requested'])
-                    elif not any(r.get('strict_output_pass') and r.get('quads',2049)<=2048 for r in self.rows[1:]) and self.variant!='no_recovery':
+                    elif not any(r.get('strict_output_pass') and self.min_quads<=r.get('quads',self.max_quads+1)<=self.max_quads for r in self.rows[1:]) and self.variant!='no_recovery':
                         measured=[r for r in self.rows[1:] if r.get('edge_defects') and r['id'] not in expanded]
                         unexpanded=[r for r in self.rows[1:] if r['id'] not in expanded]
                         if not unexpanded:break
@@ -128,8 +128,8 @@ class CoordinatorV5(Coordinator):
                         result=failure_removal(self.mesh,output,self.groups,state['groups'],self.ctx)
                         self.trace.append(dict(round=round_id,operation='failure_removal',parent=parent['id'],proposal=result))
                         if result:self.branch(f'r{round_id}_remove',result['groups'],state['density'],state['g'],state['target'],state['requested'])
-                        if not self.count_probe_used and state['target']<2048:
-                            self.count_probe_used=True;target=min(2048,2*state['target']);rho,_,stats=allocate(self.mesh,self.h,self.req,target/self.base['quads'])
+                        if not self.count_probe_used and state['target']<self.max_quads:
+                            self.count_probe_used=True;target=min(self.max_quads,2*state['target']);rho,_,stats=allocate(self.mesh,self.h,self.req,target/self.base['quads'])
                             self.trace.append(dict(round=round_id,operation='count_probe',parent=parent['id'],target=target,allocation=stats))
                             self.branch(f'r{round_id}_count',state['groups'],rho,self.p['gsize'],target)
                     else:break
@@ -137,7 +137,7 @@ class CoordinatorV5(Coordinator):
                     self.trace.append(dict(round=round_id,parent=parent['id'],no_operation=True,action='stop' if self.requested_variant=='stop_first_noop' else 'scan_next_parent'))
                     if self.requested_variant=='stop_first_noop':break
                 if not productive:break
-        decision=strict_decision(self.rows,2048)
+        decision=strict_decision(self.rows,self.max_quads,self.min_quads)
         if not self.source_geometry_clear:decision.update(recommended_id=None,eligible_ids=[],input_rejected=True)
         self.flush();save(self.out/'decision.json',decision)
         save(self.out/'complete.json',dict(attempts=self.attempts,native_calls=self.native,reused_attempts=self.reused,

@@ -39,20 +39,25 @@ class Coordinator:
         self.p=plan;self.out=Path(out);self.out.mkdir(parents=True,exist_ok=False)
         self.miq=Path(miq);self.qex=Path(qex);self.variant=variant;self.step=step
         self.mesh=load_obj(plan['source']);self.graph=read(plan['graph']);self.base=read(plan['baseline_record']);self.h=plan['reference_h']
+        self.max_quads=plan.get('max_quads',POLICY['max_actual_quads'])
+        self.min_quads=plan.get('min_quads',0)
+        if (type(self.max_quads) is not int or type(self.min_quads) is not int
+                or not 0<=self.min_quads<=self.base['quads']<=self.max_quads):
+            raise ValueError('Count policy must accommodate the measured baseline')
         self.points=None;self.groups={g['id']:{tuple(sorted(e['vertices'])) for e in self.graph['source_edges'] if e['layer']=='main' and g['id'] in e['group_ids']} for g in self.graph['groups'] if g['layer']=='main'}
         inp=Path(plan['source']).parent/'baseline';self.inp=inp
         x=np.loadtxt(plan['pd1'])[:,-3:];y=np.loadtxt(plan['pd2'])[:,-3:]
         self.ctx=ProposalContext(self.mesh,self.graph,self.base['edge_defects'],x,y,self.h)
         self.audit=EqualityAudit(self.mesh,np.loadtxt(inp/'miq_uv.txt',skiprows=1),np.loadtxt(inp/'miq_fuv.txt',skiprows=1,dtype=int),np.loadtxt(inp/'miq_combed_PD1.txt')[:,-3:],np.loadtxt(inp/'miq_combed_PD2.txt')[:,-3:])
         self.selection=select_defect_driven(self.ctx,self.audit);self.initial_selected={tuple(e) for e in self.selection['selected_edges']}
-        rho,hv,self.budget,self.req=propose(self.mesh,self.graph,self.h,self.base['quads'])
+        rho,hv,self.budget,self.req=propose(self.mesh,self.graph,self.h,self.base['quads'],dict(max_quads=self.max_quads))
         self.target=self.budget['target_quads'];self.initial_density=dict(uniform=np.full(self.mesh.face_count,np.sqrt(self.target/self.base['quads'])),allocated=rho)
         if np.allclose(rho,self.initial_density['uniform'],atol=1e-12,rtol=0):self.initial_density['allocated']=self.initial_density['uniform'].copy()
         self.rows=[dict(id='baseline',process_success=True,**self.base,**common_metrics(self.base,self.base,self.initial_selected))]
         self.states={};self.trace=[];self.cache=cache if cache is not None else {};self.native=0;self.attempts=0;self.reused=0;self.count_probe_used=False
         self.prefix=(sha(plan['source']),sha(plan['pd1']),sha(plan['pd2']),sha(miq),sha(qex))
         save(self.out/'initial_proposal.json',dict(selection=self.selection,budget=self.budget))
-        save(self.out/'policy.json',dict(**POLICY,variant=variant,actual_density_step=step))
+        save(self.out/'policy.json',dict(POLICY,variant=variant,actual_density_step=step,max_actual_quads=self.max_quads,min_actual_quads=self.min_quads))
 
     def signature(self,density,edges,g):
         return (*self.prefix,sha(density),sha(edges),float(g).hex(),0,60)
@@ -84,7 +89,7 @@ class Coordinator:
     def branch(self,name,groups,density,g,target,requested=None):
         first=self.attempt(name+'_0',groups,density,g,target,requested)
         if first and first.get('quads'):
-            corrected=count_correction_target(first['quads'],target,2048)
+            corrected=count_correction_target(first['quads'],target,self.max_quads)
             if corrected is not None:self.attempt(name+'_1',groups,density,g*math.sqrt(corrected/first['quads']),target,requested)
 
     def flush(self):
@@ -98,7 +103,7 @@ class Coordinator:
         if self.variant!='initial_only':
             for round_id in range(2):
                 if self.attempts>=12:break
-                valid=[r for r in self.rows[1:] if r.get('basic_output_pass') and r.get('quads',2049)<=2048 and r['id'] not in expanded]
+                valid=[r for r in self.rows[1:] if r.get('basic_output_pass') and self.min_quads<=r.get('quads',self.max_quads+1)<=self.max_quads and r['id'] not in expanded]
                 before_attempts=self.attempts
                 if valid:
                     parent=min(valid,key=lambda r:(r['all_main_deficit'],r['symmetric_rms_h'],r['id']));expanded.add(parent['id']);state=self.states[parent['id']]
@@ -109,10 +114,10 @@ class Coordinator:
                             proposal=result['proposal'];self.branch(f'r{round_id}_constraint',proposal['groups'],state['density'],state['g'],state['target'],state['requested'])
                     if self.variant!='no_size':
                         effective_density=state['density']*(state['g']/self.p['gsize'])
-                        result=size_operation(self.mesh,self.graph,self.h,self.base,parent,effective_density,state['target'],self.step,state['requested'])
+                        result=size_operation(self.mesh,self.graph,self.h,self.base,parent,effective_density,state['target'],self.step,state['requested'],max_quads=self.max_quads)
                         self.trace.append(dict(round=round_id,operation='size',parent=parent['id'],audit=result['audit'] if result else None))
                         if result is not None:self.branch(f'r{round_id}_size',state['groups'],result['density'],self.p['gsize'],result['target'],result['requested'])
-                elif not any(r.get('basic_output_pass') and r.get('quads',2049)<=2048 for r in self.rows[1:]) and self.variant!='no_recovery':
+                elif not any(r.get('basic_output_pass') and self.min_quads<=r.get('quads',self.max_quads+1)<=self.max_quads for r in self.rows[1:]) and self.variant!='no_recovery':
                     measured=[r for r in self.rows[1:] if r.get('edge_defects') and r['id'] not in expanded]
                     parent=min(measured,key=lambda r:(len(r.get('review',{}).get('hard_failure_reasons',[])),r['all_main_deficit'],r['id'])) if measured else self.rows[-1]
                     expanded.add(parent['id']);state=self.states[parent['id']]
@@ -121,14 +126,14 @@ class Coordinator:
                     result=failure_removal(self.mesh,output,self.groups,state['groups'],self.ctx)
                     self.trace.append(dict(round=round_id,operation='failure_removal',parent=parent['id'],proposal=result))
                     if result:self.branch(f'r{round_id}_remove',result['groups'],state['density'],state['g'],state['target'],state['requested'])
-                    if not self.count_probe_used and state['target']<2048:
-                        self.count_probe_used=True;target=min(2048,2*state['target']);rho,_,stats=allocate(self.mesh,self.h,self.req,target/self.base['quads'])
+                    if not self.count_probe_used and state['target']<self.max_quads:
+                        self.count_probe_used=True;target=min(self.max_quads,2*state['target']);rho,_,stats=allocate(self.mesh,self.h,self.req,target/self.base['quads'])
                         self.trace.append(dict(round=round_id,operation='count_probe',parent=parent['id'],target=target,allocation=stats))
                         self.branch(f'r{round_id}_count',state['groups'],rho,self.p['gsize'],target)
                 else:break
                 if self.attempts==before_attempts:
                     self.trace.append(dict(round=round_id,stop='no_new_operation_from_available_parent'));break
-        decision=decide_protected(self.rows,2048);self.flush();save(self.out/'decision.json',decision)
+        decision=decide_protected(self.rows,self.max_quads,self.min_quads);self.flush();save(self.out/'decision.json',decision)
         save(self.out/'complete.json',dict(attempts=self.attempts,native_calls=self.native,reused_attempts=self.reused,
             recommended=decision['recommended_id'],all_candidates_retained=True,reference_edges=len(self.ctx.all_edges),variant=self.variant))
         return decision
